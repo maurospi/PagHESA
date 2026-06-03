@@ -1,0 +1,93 @@
+/* Aprende Jugando Section Styles */
+#learn-playing {
+    position: relative;
+    padding: 100px 0;
+    background: linear-gradient(135deg, #f9f9f9 0%, #eef2f3 100%);
+    overflow: hidden;
+}
+
+#learn-playing::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, #a3c34c, #345c5c);
+}
+
+.learn-playing-card {
+    background: white;
+    border-radius: 20px;
+    padding: 50px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    position: relative;
+    z-index: 2;
+}
+
+.learn-playing-card:hover {
+    transform: translateY(-5px);
+}
+
+.learn-text {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.btn-game-cta {
+    position: relative;
+    display: inline-block;
+    padding: 15px 40px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff !important;
+    background: #345c5c;
+    border: none;
+    border-radius: 50px;
+    overflow: hidden;
+    z-index: 1;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(52, 92, 92, 0.4);
+}
+
+.btn-game-cta::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background: #a3c34c;
+    transition: width 0.3s ease;
+    z-index: -1;
+}
+
+.btn-game-cta:hover::before {
+    width: 100%;
+}
+
+.btn-game-cta:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(163, 195, 76, 0.6);
+}
+
+.floating-icon {
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}

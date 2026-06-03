@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<!-- Same structure as Reconocimiento -->
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Juego Días de la semana">
+    <meta name="author" content="Hablando EnSeñas">
+    <link rel="icon" href="../../../images/Logo/manoM.png">
+    <title>Días de la semana | Hablando EnSeñas</title>
+
+    <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/style.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/main.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/estilos.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/responsive.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/animate.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/prettyPhoto.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/font-awesome.css">
+    <link href="../../../css/gifs-señas.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">`r`n
+    <link rel="stylesheet" href="css/navbar.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Oswald&display=swap"
+        rel="stylesheet">
+</head>
+
+<body data-spy="scroll" data-target=".navbar-default" data-offset="100">
+
+    <div id="preloader">
+        <div class="row loader">
+            <div class="loader-icon"></div>
+        </div>
+        <img id="image" src="../../../images/Logo/marcadeagua.png" alt="Logo Hablando Enseñas de carga">
+        <div id="progress-text">Cargando <span>0%</span></div>
+    </div>
+
+    <header id="menu">
+        <div class="navbar navbar-default navbar-fixed-top" style="background-color: #333;">
+            <div class="container">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                            data-target="#bs-example-navbar-collapse-1" aria-expanded="false"> <span
+                                class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span
+                                class="icon-bar"></span> <span class="icon-bar"></span> </button>
+                        <a id="numero2" class="tooltip2 button" class="navbar-brand" href="../../../index.html"><img
+                                src="../../../images/Logo/logoo.png" width="160px" height="50px"
+                                alt="Logo Hablando Enseñas S.A.S"><span><img style="height: 100px; width: 125;"
+                                    src="../../../gifs/Hablando-en-señas-transparente-bordes.gif"
+                                    alt="Gif logo Hablando Enseñas S.A.S señado por una persona sorda"></span></a>
+                    </div>
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a class="scroll" href="../index.html">Volver a Días de la semana</a>
+                            </li>
+                            <li class="scroll button"><a href="../../../index.html" id="numero2"
+                                    class="tooltip2"><span><img style="height: 100px; width: 125;"
+                                            src="../../../gifs/Hablando-en-señas-transparente-bordes.gif"
+                                            alt="Gif logo Hablando Enseñas S.A.S señado por una persona sorda"></span>Inicio</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="game-section" style="padding-top: 100px; min-height: 80vh;">
+        <div class="container">
+            <div class="col-md-8 col-md-offset-2">
+                <div class="heading">
+                    <!--<center><span><img style="height: 150px; width: 200px; text-align: center;"
+                                src="../../../gifs/aprende-se�as-jugandotransparente-borde.gif"
+                                alt="Gif aprende se�as jugando"></span></center>-->
+                    <h2>Juego: <span>Vocabulario</span></h2>
+                    <div class="line"></div>
+                    <p style="text-align:center;">Ordena las letras para formar la palabra</p>
+                </div>
+            </div>
+
+            <div id="game-container" class="game-container wow fadeIn">
+                <div class="game-header" style="text-align: center; margin-bottom: 20px;">
+                    <span id="score-display" class="score-badge"
+                        style="font-size: 1.5rem; font-weight: bold; padding: 10px; background: #345c5c; color: white; border-radius: 20px;">Puntos:
+                        0</span>
+                    <button class="btn btn-warning" style="margin-left: 10px;"
+                        onclick="location.reload()">Reiniciar</button>
+                </div>
+                <div id="game-area" class="game-area" style="text-align: center;">
+                    <!-- Game content -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="footer">
+        <div class="bg-sec">
+            <div class="container">
+                <h2>SIGUENOS EN <strong>NUESTRAS </strong>REDES SOCIALES!</h2>
+            </div>
+        </div>
+    </footer>
+
+    <footer id="footer-down">
+        <div class="socials-container">
+            <a data-social="YouTube" style="--accent-color: red;"
+                href="https://www.youtube.com/channel/UCLQs514YnbE17Ej0SBMunRA" target="_blank">
+                <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                </svg>
+            </a>
+            <!-- Socials preserved -->
+        </div>
+        <div class="footercopy">
+            <p>&copy; <span id="year">2025</span> Hablando <span>Enseñas</span> | Todos los derechos reservados</p>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="../../../js/jquery.min.js"></script>
+    <script type="text/javascript" src="../../../js/bootstrap.js"></script>
+    <script type="text/javascript" src="../../../js/jquery.prettyPhoto.js"></script>
+    <script type="text/javascript" src="../../../js/jquery.nicescroll.js"></script>
+    <script type="text/javascript" src="../../../js/wow.js"></script>
+    <script type="text/javascript" src="../../../js/loader.js"></script>
+    <script>new WOW().init();</script>
+
+    <script src="../../js/data.js"></script>
+    <script src="js/game.js"></script>
+</body>
+
+</html>

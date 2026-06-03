@@ -1,0 +1,800 @@
+/* Bulletproof Games Layout & Navbar Fix */
+.hidden {
+    display: none !important;
+}
+
+
+/* 1. Navbar Background - Gray */
+.navbar-default {
+    background-color: #333333 !important;
+    border-color: transparent !important;
+}
+
+/* 2. Navbar Toggle Button - Gray Background */
+.navbar-default .navbar-toggle {
+    background-color: #333333 !important;
+    border: 1px solid #555555 !important;
+    border-radius: 4px;
+    margin-top: 15px;
+    margin-right: 15px;
+    padding: 9px 10px;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #ffffff !important;
+    height: 2px;
+    width: 22px;
+    display: block;
+}
+
+/* Hover/Focus State for Toggle */
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+    background-color: #555555 !important;
+    border-color: #777777 !important;
+}
+
+.navbar-default .navbar-toggle:hover .icon-bar,
+.navbar-default .navbar-toggle:focus .icon-bar {
+    background-color: #a3c34c !important;
+}
+
+/* 3. Centered Grid Layout (Inline-Block Method) */
+/* This method is more robust for centering uneven rows (e.g. 7 items) than float:left */
+
+.row-games {
+    text-align: center;
+    /* Centers the inline-block children */
+    font-size: 0;
+    /* Removes whitespace gap between inline-blocks */
+    margin-top: 30px;
+}
+
+.game-wrapper {
+    display: inline-block;
+    float: none !important;
+    /* Disable bootstrap floats */
+    vertical-align: top;
+    /* Align to top */
+    width: 32%;
+    /* 3 items per row */
+    margin: 15px 0.5%;
+    /* Spacing */
+    font-size: 16px;
+    /* Reset font size for content */
+}
+
+/* Theme Card Styling */
+.theme-card {
+    background: #fff;
+    padding: 25px 15px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    /* Subtle shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+    /* Full height */
+    min-height: 380px;
+    /* Uniform height */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #f0f0f0;
+}
+
+.theme-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(52, 92, 92, 0.15);
+    /* Teal hint */
+    border-bottom: 4px solid #a3c34c;
+    /* Accent border on hover */
+}
+
+/* Typography & Content */
+.theme-icon {
+    width: 250px;
+    height: 250px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.theme-icon img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.theme-title {
+    font-family: 'Merriweather', serif;
+    font-weight: 700;
+    font-size: 20px;
+    color: #345c5c;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.theme-desc {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 20px;
+    min-height: 40px;
+    line-height: 1.4;
+    padding: 0 10px;
+}
+
+/* Game Mode Utility Buttons */
+.game-modes {
+    margin-top: auto;
+    /* Push to bottom */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.btn-game-mode {
+    background: #345c5c;
+    color: white !important;
+    padding: 8px 0;
+    border-radius: 20px;
+    font-size: 12px;
+    font-family: aktiv-grotesk-extended, sans-serif;
+    font-weight: 700;
+    text-decoration: none !important;
+    transition: 0.3s;
+    display: block;
+    width: 100%;
+}
+
+.btn-game-mode:hover {
+    background: #a3c34c;
+    transform: scale(1.02);
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+    .game-wrapper {
+        width: 48%;
+        /* 2 per row */
+    }
+}
+
+@media (max-width: 600px) {
+    .game-wrapper {
+        width: 95%;
+        /* 1 per row */
+        margin: 15px auto;
+        display: block;
+    }
+}
+
+@media (max-width: 767px) {
+    .game-wrapper {
+        width: 95%;
+        /* 1 per row */
+        margin: 15px auto;
+        display: block;
+    }
+}
+
+/* ==============================================
+   Game Selection Menu (Inside Theme Pages)
+   ============================================== */
+.game-selector {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center !important;
+    width: 100% !important;
+    margin: 50px auto 80px auto !important;
+    gap: 30px;
+    padding: 0 15px;
+}
+
+/* ==============================================
+   Game Selection Menu (Bootstrap Centered)
+   ============================================== */
+.game-selector-bootstrap {
+    text-align: center;
+    /* Center inline-block children */
+    margin-top: 50px;
+    margin-bottom: 80px;
+}
+
+.game-card-wrapper {
+    display: inline-block;
+    float: none !important;
+    /* Override standard Bootstrap float */
+    vertical-align: top;
+    margin-bottom: 30px;
+}
+
+.game-choice {
+    background: #ffffff;
+    padding: 40px 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    display: block;
+    width: 100%;
+    /* Max width handled by column, but add limit for safety */
+    max-width: 350px;
+    margin: 0 auto;
+    /* Center within the column */
+
+    height: 100%;
+    min-height: 280px;
+    /* Consistent height */
+
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Hover Effect */
+.game-choice:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(52, 92, 92, 0.2);
+    /* Theme color shadow */
+    border-color: #345c5c;
+    text-decoration: none;
+}
+
+.game-choice::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, #345c5c, #a3c34c);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.game-choice:hover::before {
+    opacity: 1;
+}
+
+.game-choice span {
+    font-size: 50px;
+    display: block;
+    margin-bottom: 20px;
+    transition: transform 0.3s;
+}
+
+.game-choice:hover span {
+    transform: scale(1.1);
+}
+
+.game-choice h3 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #345c5c;
+    /* Primary Dark */
+    margin: 10px 0;
+    font-family: 'Merriweather', serif;
+}
+
+.game-choice p {
+    font-size: 15px;
+    color: #666;
+    margin: 0;
+}
+
+.game-section {
+    padding-top: 150px;
+    /* Space for fixed navbar */
+    min-height: 80vh;
+    background-color: #f9f9f9;
+    /* Light contrast bg */
+}
+
+/* ==============================================
+   Social Media Styling (Modern & Sleek)
+   ============================================== */
+.socials-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 30px 0;
+    margin-top: 20px;
+}
+
+.socials-container a {
+    width: 55px;
+    height: 55px;
+    background: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    /* Bouncy effect */
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+}
+
+.socials-container a svg {
+    width: 26px;
+    height: 26px;
+    fill: #444;
+    z-index: 2;
+    transition: fill 0.3s ease;
+}
+
+.socials-container a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--accent-color, #333);
+    border-radius: 50%;
+    transform: scale(0);
+    transition: transform 0.3s ease;
+    z-index: 1;
+}
+
+.socials-container a:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.socials-container a:hover::before {
+    transform: scale(1);
+}
+
+
+/* ==============================================
+   Game Engine Styles (Cards, Slots, Etc)
+   ============================================== */
+#game-area {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding-bottom: 50px;
+}
+
+.img-preview {
+    max-width: 300px;
+    max-height: 300px;
+    border-radius: 15px;
+    margin-bottom: 25px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border: 3px solid white;
+}
+
+.btn-option {
+    margin: 10px;
+    padding: 12px 25px;
+    font-size: 1.1rem;
+    background: #345c5c;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    transition: all 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn-option:hover {
+    background: #a3c34c;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    color: white;
+}
+
+/* Vocabulario (Spelling) */
+.letter-slot {
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+    margin: 5px;
+    cursor: pointer;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.2s;
+    background: white;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05);
+}
+
+.letter-slot:hover {
+    transform: scale(1.1);
+    border-color: #345c5c;
+}
+
+.letter-slot img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#vocab-answer {
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+#vocab-answer .letter-slot {
+    border-color: #a3c34c;
+    animation: popIn 0.3s ease;
+}
+
+@keyframes popIn {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Memoria */
+.memory-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.memory-card {
+    width: 100px;
+    height: 100px;
+    background-color: #345c5c;
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTEgMWgydjJIMUMxeiIgZmlsbD0iI2ZmZiIgZmlsbC1vcGFjaXR5PSIwLjEiLz48L3N2Zz4=');
+    /* Texture */
+    border-radius: 12px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s, background-color 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.memory-card:hover {
+    transform: translateY(-3px);
+}
+
+.memory-card img {
+    display: none;
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 4px;
+}
+
+.memory-card.flipped {
+    background-color: white;
+    border: 2px solid #a3c34c;
+    transform: rotateY(180deg);
+}
+
+.memory-card.flipped img {
+    display: block;
+}
+
+/* Modal Result */
+.result-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+    animation: fadeIn 0.5s;
+}
+
+.result-content {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+    position: relative;
+}
+
+.result-content h2 {
+    color: #345c5c;
+    margin-bottom: 15px;
+}
+
+.result-content p {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #a3c34c;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes overlayFadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Oval On-Screen Alert (Requested Basic Style) */
+/* Oval On-Screen Alert (Bulletproof) */
+.game-notification-oval {
+    position: fixed !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    padding: 20px 60px !important;
+    border-radius: 50px !important;
+    color: white !important;
+    font-size: 28px !important;
+    font-weight: 900 !important;
+    text-align: center !important;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5) !important;
+    z-index: 2147483647 !important;
+    /* Max Z-Index */
+    border: 5px solid white !important;
+    min-width: 300px !important;
+    opacity: 1 !important;
+    /* Force visible */
+
+    /* Simplified Animation */
+    animation: simplePop 0.4s ease-out forwards !important;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+}
+
+.game-notification-oval.success {
+    background-color: #a3c34c !important;
+    /* Green */
+    background-image: linear-gradient(135deg, #a3c34c, #8dae36) !important;
+}
+
+.game-notification-oval.error {
+    background-color: #e74c3c !important;
+    /* Red */
+    background-image: linear-gradient(135deg, #e74c3c, #c0392b) !important;
+}
+
+@keyframes simplePop {
+    0% {
+        transform: translate(-50%, -50%) scale(0.5) !important;
+        opacity: 0 !important;
+    }
+
+    80% {
+        transform: translate(-50%, -50%) scale(1.1) !important;
+        opacity: 1 !important;
+    }
+
+    100% {
+        transform: translate(-50%, -50%) scale(1) !important;
+        opacity: 1 !important;
+    }
+}
+
+
+@keyframes alertPopIn {
+    from {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+
+
+/* Shared Animations */
+
+@keyframes shake {
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        transform: translateX(-5px);
+    }
+
+    20%,
+    40%,
+    60%,
+    80% {
+        transform: translateX(5px);
+    }
+}
+
+.shake {
+    animation: shake 0.5s cubic-bezier(.36, .07, .19, .97) both;
+}
+
+@keyframes correct-pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(163, 195, 76, 0.7);
+    }
+
+    70% {
+        transform: scale(1.05);
+        box-shadow: 0 0 0 10px rgba(163, 195, 76, 0);
+    }
+
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(163, 195, 76, 0);
+    }
+}
+
+.correct-pulse {
+    animation: correct-pulse 0.5s ease-out;
+}
+
+/* Enhanced Game Section Centering */
+.game-section {
+    padding-top: 120px;
+    min-height: 85vh;
+    background-color: #f9f9f9;
+
+    /* Flexbox Centering */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center;  <-- Optional: centers vertically too strongly if content is tall */
+}
+
+/* Ensure container within section is centered */
+.game-section>.container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Game Container - The white box holding the game */
+.game-container {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
+    width: 95%;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    animation: fadeInUp 0.6s ease;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Interactive Element Animations */
+.btn-option:active,
+.btn-game-mode:active {
+    transform: scale(0.95);
+}
+
+.game-image {
+    transition: transform 0.3s ease;
+}
+
+.game-image:hover {
+    transform: scale(1.02);
+}
+
+/* Loading Transition for new questions */
+.fade-in {
+    animation: fadeIn 0.5s ease forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ==============================================
+   RESPONSIVE UTILITIES (Added 2025)
+   ============================================== */
+
+/* Make all videos responsive */
+video,
+iframe {
+    max-width: 100% !important;
+    height: auto !important;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Ensure theme icons don't overflow */
+.theme-icon img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.theme-icon {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    aspect-ratio: 1/1;
+}
+
+/* Responsive Game Menu Grid in Sub-pages */
+@media (max-width: 768px) {
+    .game-selector {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .game-choice {
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .game-section {
+        padding-top: 100px;
+    }
+
+    .heading h2 {
+        font-size: 28px;
+    }
+}
+
+/* Fix Navbar overlap on mobile */
+@media (max-width: 480px) {
+    .navbar-brand img {
+        width: 120px;
+        height: auto;
+    }
+
+    .game-section {
+        padding-top: 80px;
+    }
+}

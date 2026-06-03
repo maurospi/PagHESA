@@ -1,0 +1,196 @@
+.a {
+    background-image: url(../images/alfabeto/A.jpg);
+    height: 60px;
+    width: 90px;
+}
+
+.b {
+    background-image: url(../images/alfabeto/B.jpg);
+    height: 60px;
+    width: 90px;
+    margin-left: 4%;
+}
+
+.c {
+    background-image: url(../images/alfabeto/C.jpg);
+    height: 60px;
+    width: 90px;
+    margin-left: 8%;
+}
+
+.d {
+    background-image: url(../images/alfabeto/D.jpg);
+    height: 60px;
+    width: 90px;
+    margin-left: 12%;
+}
+
+.e {
+    background-image: url(../images/alfabeto/E.jpg);
+    height: 60px;
+    width: 90px;
+    margin-left: 16%;
+}
+
+.f {
+    background-image: url(../images/alfabeto/F.jpg);
+    height: 60px;
+    width: 90px;
+    margin-left: 20%;
+}
+
+.g {
+    background-image: url(../images/alfabeto/G.jpg);
+    height: 60px;
+    width: 90px;
+}
+
+.h {
+    background-image: url(../images/alfabeto/H.jpg);
+    height: 60px;
+    width: 90px;
+    margin-left: 4%;
+}
+
+.i {
+    background-image: url(../images/alfabeto/I.jpg);
+    height: 60px;
+    width: 90px;
+    margin-left: 8%;
+}
+
+.j {
+    background-image: url(../images/alfabeto/J.jpg);
+    height: 60px;
+    width: 90px;
+    margin-left: 12%;
+}
+
+.k {
+    background-image: url(../images/alfabeto/K.jpg);
+    height: 60px;
+    width: 90px;
+    margin-left: 16%;
+}
+
+.l {
+    background-image: url(../images/alfabeto/L.jpg);
+    height: 60px;
+    width: 90px;
+    margin-left: 20%;
+}
+
+.m {
+    background-image: url(../images/alfabeto/M.jpg);
+    height: 60px;
+    width: 90px;
+}
+
+.n {
+    background-image: url(../images/alfabeto/N.jpg);
+    height: 60px;
+    width: 90px;
+    margin-left: 4%;
+}
+
+.ñ {
+    background-image: url(../images/alfabeto/Ñ.jpg);
+    height: 60px;
+    width: 90px;
+    margin-left: 8%;
+}
+
+.o {
+    background-image: url(../images/alfabeto/O.jpg);
+    height: 60px;
+    width: 90px;
+    margin-left: 12%;
+}
+
+.p {
+    background-image: url(../images/alfabeto/P.jpg);
+    height: 60px;
+    width: 90px;
+    margin-left: 16%;
+}
+
+.q {
+    background-image: url(../images/alfabeto/Q.jpg);
+    height: 60px;
+    width: 90px;
+    margin-left: 20%;
+}
+
+.r {
+    background-image: url(../images/alfabeto/R.jpg);
+    height: 60px;
+    width: 90px;
+}
+
+.s {
+    background-image: url(../images/alfabeto/S.jpg);
+    height: 60px;
+    width: 90px;
+    margin-left: 4%;
+}
+
+.t {
+    background-image: url(../images/alfabeto/T.jpg);
+    height: 60px;
+    width: 90px;
+    margin-left: 8%;
+}
+
+.u {
+    background-image: url(../images/alfabeto/U.jpg);
+    height: 60px;
+    width: 90px;
+    margin-left: 12%;
+}
+
+.v {
+    background-image: url(../images/alfabeto/V.jpg);
+    height: 60px;
+    width: 90px;
+    margin-left: 16%;
+}
+
+.w {
+    background-image: url(../images/alfabeto/W.jpg);
+    height: 60px;
+    width: 90px;
+    margin-left: 20%;
+}
+
+.x {
+    background-image: url(../images/alfabeto/X.jpg);
+    height: 60px;
+    width: 90px;
+}
+
+.y {
+    background-image: url(../images/alfabeto/Y.jpg);
+    height: 60px;
+    width: 90px;
+    margin-left: 4%;
+}
+
+.z {
+    background-image: url(../images/alfabeto/Z.jpg);
+    height: 60px;
+    width: 90px;
+    margin-left: 8%;
+}
+
+.guion {
+    background-image: url(../images/alfabeto/guion.png);
+    height: 60px;
+    width: 90px;
+    margin-left: 12%;
+}
+
+
+}
+#marginBotones {
+    margin-top: 20px;
+}

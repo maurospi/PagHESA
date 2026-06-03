@@ -1,0 +1,70 @@
+/* Hardened CSS for Games Section */
+
+/* 1. Navbar Toggle Fix (High Specificity) */
+.navbar-default .navbar-toggle {
+    background-color: #dddddd !important;
+    /* Visible Gray */
+    border-color: #cccccc !important;
+    margin-right: 15px;
+    /* Ensure spacing */
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #555555 !important;
+    /* Darker icon lines for contrast */
+}
+
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+    background-color: #cccccc !important;
+    /* Darker gray on hover */
+}
+
+
+/* 2. Grid Layout Alignment Fix */
+
+/* Ensure the container is flex and centered */
+.row-games {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* Horizontally center content */
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+/* Individual Game Card Wrapper */
+.game-wrapper {
+    width: 33.3333%;
+    /* Force 1/3 width */
+    padding: 0 15px;
+    margin-bottom: 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+    /* Center the card within the wrapper */
+}
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+    .game-wrapper {
+        width: 50%;
+        /* 2 per row on tablets */
+    }
+}
+
+@media (max-width: 600px) {
+    .game-wrapper {
+        width: 100%;
+        /* 1 per row on mobile */
+    }
+}
+
+/* Existing Button Styles (Preserved) */
+.btn-game-mode {
+    font-family: aktiv-grotesk-extended, sans-serif;
+    font-weight: 700;
+}

@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Días de la semana</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/prettyPhoto.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/gifs-señas.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/responsive.css" rel="stylesheet">
+    <script src="js/jquery3-2-1.js"></script>
+    <script src="js/buttonToogle.js"></script>
+    <link rel="stylesheet" href="css/redes.css">
+    <link href="css/boton.css" rel="stylesheet">
+    <script src="css/boton.js"></script>
+
+
+
+    <script src="js/ahorcadoSemanas.js"></script>
+    <link rel="stylesheet" href="css/botonAhorcado.css">
+
+    <!-- Aumentar texto -->
+    <script type="text/javascript" src="js/jquerytextresizer.js"></script>
+
+    <script type="text/javascript" src="js/textresizer.js">
+    </script>
+
+    <script type="text/javascript">
+        var mytextsizer = new fluidtextresizer({
+            controlsdiv: "sizecontroldiv", //id of special div containing your resize controls. Enter "" if not defined
+            targets: ["body", "nav", "button", "li"], //target elements to resize text within: ["selector1", "selector2", etc]
+            levels: 7, //number of levels users can magnify (or shrink) text
+            persist: "session", //enter "session" or "none"
+            animate: 200 //animation duration of text resize. Enter 0 to disable
+        })
+    </script>
+
+    <!-- Fin Aumentar Texto -->
+
+
+</head>
+
+<body>
+
+    <header id="navigation">
+
+        <div class="navbar navbar-inverse navbar-fixed-top" role="banner" class="dropdown">
+
+            <div class="container">
+
+                <div class="navbar-header">
+
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> 
+                        
+                                                <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> 
+                        
+                                            </button>
+
+                    <a class="navbar-brand" href="index.html">
+                        <h1><img src="images/logo.png" alt="logo"></h1>
+                    </a>
+
+                </div>
+
+                <div class="collapse navbar-collapse">
+
+                    <ul class="nav navbar-nav navbar-right">
+
+                        <li>
+                            <div id="sizecontroldiv" class="controlstyle">
+
+
+                                <a href="#smaller" style="background-color: transparent"><img src="images/fontminus.gif" alt="Minimizar tamaño letra" title="Disminuir el tamaño de la letra" /></a>
+                                <a href="#bigger" style="background-color: transparent"><img src="images/fontplus.gif" alt="Maximizar tamaño letra" / title="Aumentar el tamaño de la letra"></a><br /><br /> </div>
+                        </li>
+
+                        <li><a href="index.html" id="numero1" class="tooltip1" href="gifs-señas.css"><span><img src="gifs/bienvenidos.gif"></span>Bienvenidos</a></li>
+
+                        <li class="scroll"><a href="index.html" id="numero2" class="tooltip2" href="gifs-señas.css"><span><img src="gifs/quienessomos.gif"></span>Quiénes Somos</a></li>
+
+                        <li class="scroll"><a href="index.html" id="numero3" class="tooltip3" href="gifs-señas.css"><span><img src="gifs/nuestrosservicios.gif"></span>Nuestros Servicios</a></li>
+
+                        <li class="scroll "><a href="index.html" id="numero4" class="tooltip4" href="gifs-señas.css"><span><img src="gifs/contactenos.gif"></span>Contáctenos</a></li>
+
+                        <li class="scroll active "><a href="aprende.html" id="numero4" class="tooltip4" href="gifs-señas.css"><span></span>Aprende hablando EnSeñas</a></li>
+
+
+
+
+
+                    </ul>
+
+                </div>
+
+
+
+            </div>
+
+        </div>
+        <!--/navbar-->
+
+    </header>
+
+
+    <div class="container-fluid text-center; fondo" style="margin-top:120px" background="images/fondo.jpg">
+
+
+        <div class="row content fondoSection ">
+            <div class="col-sm-2 sidenav side" id="bordeAside" style="height: auto; ">
+
+
+
+
+                <div class="btn-group" style="margin-top:18%">
+                    <button type="button" class="btn dropdown-toggle" data-toggle="dropdown">  <img src="images/abc.jpg" class="asideB" alt=""></button>
+
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="introduccionAbece.html">Abecedario</a></li>
+                        <li><a href="adivinaAbece.html">Adivina la letra</a></li>
+                        <li><a href="botonAbece.html">¿Cùal es la respuesta Correcta?</a></li>
+
+                    </ul>
+
+                </div>
+
+                <div class="btn-group" style="margin-top:30% ">
+                    <button type="button" class="btn dropdown-toggle" data-toggle="dropdown">  <img src="images/meses.jpg" class="asideB" alt=""></button>
+
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="introduccionMeses.html">Meses del año</a></li>
+                        <li><a href="adivinMeses.html">Adivina la palabra</a></li>
+                        <li><a href="botonesMeses.html">¿Cùal es la respuesta Correcta?</a></li>
+                        <li><a href="ahorcadoMeses.html">Ahorcado</a></li>
+
+                    </ul>
+
+                </div>
+
+                <div class="btn-group" style="margin-top:25% ">
+                    <button type="button" class="btn dropdown-toggle" data-toggle="dropdown">  <img src="images/colores.jpg" class="asideB" alt=""></button>
+
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="introduccionColores.html">Colores</a></li>
+                        <li><a href="adivinaColores.html">Adivina la palabra</a></li>
+                        <li><a href="botonColores.html">¿Cùal es la respuesta Correcta?</a></li>
+                        <li><a href="ahorcadoColores.html">Ahorcado</a></li>
+
+
+                    </ul>
+
+                </div>
+
+                <div class="btn-group " style="margin-top:25% ">
+                    <button type="button" class="btn dropdown-toggle " data-toggle="dropdown">  <img src="images/infoPersonal.jpg" class="asideB" alt=""></button>
+
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="introduccionPresentacion.html">Información Personal</a></li>
+                        <li><a href="adivinaPresentacion.html">Adivina la palabra</a></li>
+                        <li><a href="botonesPresentacion.html">¿Cùal es la respuesta Correcta?</a></li>
+                        <li><a href="ahorcadoPresentacion.html">Ahorcado</a></li>
+
+                    </ul>
+
+                </div>
+
+
+
+                <div class="btn-group " style="margin-top:30% ">
+                    <button type="button" class="btn dropdown-toggle " data-toggle="dropdown">  <img src="images/saludos.jpg" class="asideB" alt=""></button>
+
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="introduccionSaludos.html">Saludos</a></li>
+                        <li><a href="adivinaSaludos.html">Adivina la palabra</a></li>
+                        <li><a href="botonSaludos.html">¿Cùal es la respuesta Correcta?</a></li>
+                        <li><a href="ahorcadoSaludos.html">Ahorcado</a></li>
+
+                    </ul>
+
+                </div>
+
+
+
+                <div class="btn-group" style="margin-top:30%; margin-bottom: 75%  ">
+                    <button type="button" class="btn dropdown-toggle" data-toggle="dropdown">  <img src="images/dias.jpg" class="asideB" alt=""></button>
+
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="introduccionSemanas.html">Días de la semana</a></li>
+                        <li><a href="adivinaSemanas.html">Adivina la palabra</a></li>
+                        <li><a href="botonSemanas.html">¿Cùal es la respuesta Correcta?</a></li>
+                        <li><a href="ahorcadoSemanas.html">Ahorcado</a></li>
+
+                    </ul>
+
+                </div>
+
+
+
+
+
+            </div>
+
+            <!-- SECTION PRINCIPAL -->
+            <div class="col-sm-9 text-center imagenFondo bordeDiv" id="primero" style="height: 100%">
+
+                <br>
+
+                <H2><b>Juego del ahorcado</b></H2>
+                <br><br>
+                <FORM NAME=visor style="height: auto">
+                    <CENTER>
+                        <div class="table-responsive" style="margin-left: 13%">
+                            <TABLE width=547 class="table" style="text-align: center">
+                                <TR>
+                                    <TD colspan=3 width=800 ALIGN=center disabled="disabled">
+
+                                        <img id="ahoracadoimagen" name=displayHombre src="images/ahorcado/principal.jpg" alt="">
+                                        <TD colspan=3 WIDTH=800 ALIGN=center disabled="disabled" style="text-align: right;margin-left: 90%"><textarea name=displayLetras cols=40 rows=15></textarea>
+                                            <TD width=300>
+                                                <TR>
+                                                    <TD colspan=6 width=500 ALIGN=center>
+                                                        <INPUT style="margin-left: 6px; margin-top:20px" NAME=displayPalabra SIZE=85>
+                                                        <TD ALIGN=center>&nbsp;
+                                                            <TR>
+                                                                <td align=center width=50><input id="marginBotones" type=button name=botA class="a" value="  " onClick="Juega(this.form, 'a')">
+                                                                    <td align=center width=50><input id="marginBotones" type=button name=botB class=" b " onClick="Juega(this.form, 'b')">
+                                                                        <td align=center width=50><input id="marginBotones" type=button name=botC class=" c " onClick="Juega(this.form, 'c')">
+                                                                            <td align=center width=50><input id="marginBotones" type=button name=botD class=" d " onClick="Juega(this.form, 'd')">
+                                                                                <td align=center width=50><input id="marginBotones" type=button name=botE class=" e " onClick="Juega(this.form, 'e')">
+                                                                                    <td align=center width=50><input id="marginBotones" type=button name=botF class=" f " onClick="Juega(this.form, 'f')">
+                                                                                        <td>
+                                                                                            <tr>
+                                                                                                <td align=center><input type=button name=botG class=" g " onClick="Juega(this.form, 'g')">
+                                                                                                    <td align=center><input type=button name=botH class=" h " onClick="Juega(this.form, 'h')">
+                                                                                                        <td align=center><input type=button name=botI class=" i " onClick="Juega(this.form, 'i')">
+                                                                                                            <td align=center><input type=button name=botJ class=" j " onClick="Juega(this.form, 'j')">
+                                                                                                                <td align=center><input type=button name=botK class=" k " onClick="Juega(this.form, 'k')">
+                                                                                                                    <td align=center><input type=button name=botL class=" l " onClick="Juega(this.form, 'l')">
+                                                                                                                        <td valign=middle>
+                                                                                                                            <p style="margin-left:20%"> Ganadas:</p> <input style="margin-left: 20%" type=text name=ganadas size=4 value=0>
+                                                                                                                            <tr>
+                                                                                                                                <td align=center><input type=button name=botM class=" m " onClick="Juega(this.form, 'm')">
+                                                                                                                                    <td align=center><input type=button name=botN class=" n " onClick="Juega(this.form, 'n')">
+                                                                                                                                        <td align=center><input type=button name=botÑ class="ñ" onClick="Juega(this.form, 'ñ')">
+                                                                                                                                            <td align=center><input type=button name=botO class=" o" onClick="Juega(this.form, 'o')">
+                                                                                                                                                <td align=center><input type=button name=botP class=" p " onClick="Juega(this.form, 'p')">
+                                                                                                                                                    <td align=center><input type=button name=botQ class=" q " onClick="Juega(this.form, 'q')">
+                                                                                                                                                        <td align=right valign=middle>
+                                                                                                                                                            <p style="margin-left: 50%; margin-right: 50%">Perdidas:</p> <input style="margin-left: 50%; margin-right: 50%" type=text name=perdidas size=4
+                                                                                                                                                                value=0>
+                                                                                                                                                            <tr>
+                                                                                                                                                                <td align=center><input type=button name=botR class=" r " onClick="Juega(this.form, 'r')">
+                                                                                                                                                                    <td align=center><input type=button name=botS class=" s " onClick="Juega(this.form, 's')">
+                                                                                                                                                                        <td align=center><input type=button name=botT class=" t " onClick="Juega(this.form, 't')">
+                                                                                                                                                                            <td align=center><input type=button name=botU class=" u " onClick="Juega(this.form, 'u')">
+                                                                                                                                                                                <td align=center><input type=button name=botV class=" v " onClick="Juega(this.form, 'v')">
+                                                                                                                                                                                    <td align=center><input type=button name=botW class=" w " onClick="Juega(this.form, 'w')">
+                                                                                                                                                                                        <td>
+                                                                                                                                                                                            <tr>
+                                                                                                                                                                                                <td align=center><input type=button name=botX class=" x " onClick="Juega(this.form, 'x')">
+                                                                                                                                                                                                    <td align=center><input type=button name=botY class=" y " onClick="Juega(this.form, 'y')">
+                                                                                                                                                                                                        <td align=center><input type=button name=botZ class=" z " onClick="Juega(this.form, 'z')">
+                                                                                                                                                                                                            <td align=center><input type=button name=botZ class=" guion " onClick="Juega(this.form, '-')">
+                                                                                                                                                                                                                <td colspan=2 align=center><input type=button name=Inicia value="  Juego nuevo   "
+                                                                                                                                                                                                                        onClick="IniciaJuego(this.form)">
+                                                                                                                                                                                                                    <td align=center><input type=button value=Limpiar name=B1
+                                                                                                                                                                                                                            onClick="this.form.ganadas.value='0'; this.form.perdidas.value='0'">
+
+                            </TABLE>
+                        </div>
+                    </CENTER>
+                </FORM>
+
+
+                <!-- VENTANA MODAL -->
+
+                <div class="modal fade" id="myModal" role="dialog" data-backdrop="static" data-keyboard="false">
+                    <div class="modal-dialog">
+
+                        <!-- Modal content-->
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title"><b> Ahorcado </b></h4>
+                            </div>
+                            <div class="modal-body">
+                                <p id="ventana_modal"></p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal" onclick="limpiar()">cerrar</button>
+                                <!-- <button type="button" class="btn btn-primary" id="btnInco" data-dismiss="modal" onclick="limpiar()">Intentalo de nuevo</button>-->
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+
+
+        <footer class="container-fluid; foter " style="background: #9dc548">
+
+
+            <div class="row">
+                <p class="alignleft">Ultima actualización: 9 de Noviembre de 2017 10:00 am</p>
+            </div>
+
+            <hr />
+
+            <div>
+                <p class="pFoter"> <b>Correo electronico: </b>
+                    <a href="https://www.hotmail.com" target="_blank"> <b>info@aprendeensenas.com <b> </a></p>
+            
+            
+                        <p class="pFoter">Linea de atención: 310 2035937 / 316 2558876 </p>
+            
+                        <p class="pFoter">PBX: (+57) 4765174 </p>
+            
+                    </div>
+            
+            
+            
+                    <div style="text-align: center">
+            
+            
+                        <a href="https://www.facebook.com/Hablandoense%C3%B1as-172342229869306/" target="_blank" class="fa fa-facebook"></a>
+                        <a href="https://twitter.com/ensenas" target="_blank" class="fa fa-twitter"></a>
+                        <a href="https://www.youtube.com/channel/UCLQs514YnbE17Ej0SBMunRA" target="_blank"  class="fa fa-youtube"></a>
+                        <a href="https://www.instagram.com/hablandoensenassas/" target="_blank"  class="fa fa-instagram"></a>
+                    </div>
+            
+                  <!--  <div class="container-fluid text-center">
+                        <a href="politicas.html" class="politica">Política de privacidad | <a href="#" class="politica">Condiciones de Uso</a></a>
+            
+                    </div>
+            
+                -->
+                </footer>
+
+</body>
+
+</html>

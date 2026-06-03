@@ -1,0 +1,98 @@
+/* Navbar Toggle Styles - Matching Landing Page */
+/* This file ensures the navbar toggle has identical styling to the main site */
+
+/* Medium screens - Tablet */
+@media all and (min-width: 480px) and (max-width: 768px) {
+
+    /* Navbar header background for toggle button visibility */
+    .navbar-header {
+        background-color: #333;
+        padding: 10px;
+        border-radius: 4px;
+    }
+
+    /* Toggle button base styling */
+    .navbar-default .navbar-toggle {
+        border: 1px solid #999;
+    }
+
+    /* Toggle button icon bars */
+    .navbar-default .navbar-toggle .icon-bar {
+        background: #999;
+    }
+
+    /* Toggle button hover/focus - icon bars turn white */
+    .navbar-default .navbar-toggle:hover .icon-bar,
+    .navbar-default .navbar-toggle:focus .icon-bar {
+        background: #FFFFFF;
+        transition: all 0.5s;
+        -moz-transition: all 0.5s;
+        -o-transition: all 0.5s;
+        -webkit-transition: all 0.5s;
+    }
+
+    /* Toggle button hover/focus - background turns green (brand color) */
+    .navbar-default .navbar-toggle:hover,
+    .navbar-default .navbar-toggle:focus {
+        background: #a3c34c;
+        transition: all 0.5s;
+        -moz-transition: all 0.5s;
+        -o-transition: all 0.5s;
+        -webkit-transition: all 0.5s;
+    }
+
+    /* Navbar collapse styling */
+    .navbar-default .navbar-collapse,
+    .navbar-default .navbar-form {
+        border: rgba(248, 248, 248, 0);
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0);
+    }
+}
+
+/* Small screens - Mobile */
+@media all and (min-width: 299px) and (max-width: 479px) {
+
+    /* Navbar header background for toggle button visibility */
+    .navbar-header {
+        background-color: #333;
+        padding: 10px;
+        border-radius: 4px;
+    }
+
+    /* Toggle button base styling */
+    .navbar-default .navbar-toggle {
+        border: 1px solid #999;
+    }
+
+    /* Toggle button icon bars */
+    .navbar-default .navbar-toggle .icon-bar {
+        background: #999;
+    }
+
+    /* Toggle button hover/focus - icon bars turn white */
+    .navbar-default .navbar-toggle:hover .icon-bar,
+    .navbar-default .navbar-toggle:focus .icon-bar {
+        background: #FFFFFF;
+        transition: all 0.5s;
+        -moz-transition: all 0.5s;
+        -o-transition: all 0.5s;
+        -webkit-transition: all 0.5s;
+    }
+
+    /* Toggle button hover/focus - background turns green (brand color) */
+    .navbar-default .navbar-toggle:hover,
+    .navbar-default .navbar-toggle:focus {
+        background: #a3c34c;
+        transition: all 0.5s;
+        -moz-transition: all 0.5s;
+        -o-transition: all 0.5s;
+        -webkit-transition: all 0.5s;
+    }
+
+    /* Navbar collapse styling */
+    .navbar-default .navbar-collapse,
+    .navbar-default .navbar-form {
+        border: rgba(248, 248, 248, 0);
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0);
+    }
+}

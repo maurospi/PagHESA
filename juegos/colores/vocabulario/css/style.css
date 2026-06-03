@@ -1,0 +1,60 @@
+.game-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    max-height: 250px;
+}
+
+.answer-area {
+    min-height: 70px;
+    border-bottom: 3px dashed #345c5c;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    background-color: rgba(52, 92, 92, 0.1);
+    border-radius: 10px;
+}
+
+.slots-area {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    min-height: 70px;
+}
+
+.letter-slot {
+    width: 60px;
+    height: 60px;
+    border: 2px solid #345c5c;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-size: 24px;
+    font-weight: bold;
+    overflow: hidden;
+    transition: transform 0.2s;
+}
+
+.letter-slot:hover {
+    transform: scale(1.1);
+    background-color: #f0f0f0;
+}
+
+.result-box {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin: 0 auto;
+}

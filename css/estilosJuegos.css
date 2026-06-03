@@ -1,0 +1,343 @@
+* {
+    box-sizing: border-box;
+}
+
+button {
+    background-color: mediumseagreen;
+    ;
+}
+
+.fondoGames {
+    background-image: url("../images/fondoJuegos.jpg");
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    z-index: 1;
+}
+
+.fondoGamesAhorcado {
+    background-image: url("../images/fondito.jpg");
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    z-index: 1;
+}
+
+.container-cajas {
+    width: 100%;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-between;
+    margin-top: 150px;
+}
+
+.asideIzquierdo {
+    background-color: #33cc64;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 0.17;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-around;
+    padding: 10px;
+    margin: 4px;
+    height: auto;
+}
+
+.asideDerecho {
+    background-color: #33cc64;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 0.17;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-around;
+    padding: 10px;
+    margin: 4px;
+    height: auto;
+}
+
+.cambiar:hover {
+    background-color: darkcyan;
+}
+
+.column {
+    background-color: #39444c;
+    color: black;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    padding: 10px;
+    margin: 4px;
+    height: auto;
+}
+
+footer {
+    background-color: #39444c;
+    color: #fff;
+    padding: 10px;
+}
+
+.margin-boton {
+    margin-top: 16px;
+}
+
+
+/* footer social icons */
+
+ul.social-network {
+    list-style: none;
+    display: inline;
+    text-align: center;
+    padding: 0;
+}
+
+ul.social-network li {
+    display: inline;
+    margin: 0 5px;
+}
+
+
+/* footer social icons */
+
+.social-network a.icoRss:hover {
+    background-color: #F56505;
+}
+
+.social-network a.icoFacebook:hover {
+    background-color: #3B5998;
+}
+
+.social-network a.icoTwitter:hover {
+    background-color: #33ccff;
+}
+
+.social-network a.icoGoogle:hover {
+    background-color: #BD3518;
+}
+
+.social-network a.icoVimeo:hover {
+    background-color: #0590B8;
+}
+
+.social-network a.icoLinkedin:hover {
+    background-color: #007bb7;
+}
+
+.social-network a.icoInstagram:hover {
+    background-color: #548cb9;
+}
+
+.social-network a.icoYoutube:hover {
+    background-color: #e52d27;
+}
+
+.social-network a.icoRss:hover i,
+.social-network a.icoFacebook:hover i,
+.social-network a.icoTwitter:hover i,
+.social-network a.icoGoogle:hover i,
+.social-network a.icoVimeo:hover i,
+.social-network a.icoLinkedin:hover i,
+.social-network a.icoInstagram:hover i,
+.social-network a.icoYoutube:hover {
+    color: #fff;
+}
+
+a.socialIcon:hover,
+.socialHoverClass {
+    color: #44BCDD;
+}
+
+.social-circle li a {
+    display: inline-block;
+    position: relative;
+    margin: 0 auto 0 auto;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    text-align: center;
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+}
+
+.social-circle li i {
+    margin: 0;
+    line-height: 50px;
+    text-align: center;
+}
+
+.social-circle li a:hover i,
+.triggeredHover {
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -ms--transform: rotate(360deg);
+    transform: rotate(360deg);
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    transition: all 0.2s;
+}
+
+.social-circle i {
+    color: #fff;
+    -webkit-transition: all 0.8s;
+    -moz-transition: all 0.8s;
+    -o-transition: all 0.8s;
+    -ms-transition: all 0.8s;
+    transition: all 0.8s;
+}
+
+.fondoIcon {
+    background-color: #D3D3D3;
+}
+
+.asideIzquierdo button {
+    height: 130px;
+}
+
+.asideDerecho button {
+    height: 130px;
+}
+
+@media (max-width: 600px) {
+    .container-cajas {
+        /*-webkit-flex-direction: column;
+                flex-direction: column;*/
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 600px) and (min-width: 297px) {
+    button {
+        height: 100px;
+    }
+}
+
+@media (max-width: 600px) and (min-width: 297px) {
+    .asideIzquierdo button {
+        height: 190px;
+    }
+    .asideIzquierdo button img {
+        height: 100%;
+        width: 90%;
+    }
+    .asideIzquierdo {
+        width: 100%;
+    }
+    .asideDerecho button {
+        height: 190px;
+    }
+    .asideDerecho button img {
+        height: 100%;
+        width: 90%;
+    }
+    .asideDerecho {
+        width: 100%;
+    }
+    .column video {
+        width: 100%;
+        height: 200px;
+    }
+    .column h2 {
+        margin-top: 900px;
+    }
+}
+
+@media (max-width:940px) and (min-width:555px) {
+    .container-cajas {
+        flex-direction: column;
+        width: 100%;
+        position: relative;
+    }
+    .asideIzquierdo {
+        margin: 2px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 10%;
+        width: 100%;
+    }
+    .asideIzquierdo button {
+        width: 90%;
+    }
+    .asideIzquierdo button img {
+        height: 100%;
+        width: 90%;
+    }
+    .column {
+        width: 100%;
+    }
+    .asideDerecho {
+        margin: 2px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 1%;
+        width: 100%;
+    }
+    .asideDerecho button {
+        width: 90%;
+    }
+    .asideDerecho button img {
+        height: 100%;
+        width: 90%;
+    }
+}
+
+@media (min-width:1430px) and (max-width:2048px) {
+    .tablaAhorcado {
+        margin-left: 20%;
+    }
+}
+
+
+/* BOTONES ABECE:HTML */
+
+.botonAbece {
+    height: 70px;
+    width: 70px;
+    margin-bottom: 20px;
+    margin-right: 15px
+}
+
+.botonColores {
+    height: 70px;
+    width: 100px;
+    margin-bottom: 20px;
+    margin-right: 15px;
+}
+
+.botonMeses {
+    height: 70px;
+    width: 90px;
+    margin-bottom: 20px;
+    margin-right: 15px;
+}
+
+.botonPresentacion {
+    height: 70px;
+    width: 140px;
+    margin-bottom: 20px;
+    margin-right: 15px;
+}
+
+.botonSaludos {
+    height: 70px;
+    width: 130px;
+    margin-bottom: 20px;
+    margin-right: 15px;
+}
+
+.botonSemanas {
+    height: 70px;
+    width: 110px;
+    margin-bottom: 20px;
+    margin-right: 15px;
+}
