@@ -15,6 +15,7 @@ html, body {
 	background-color: #1a1a1a;
 }
 </style>
+  <link rel="stylesheet" href="../../accessibility-kit/accessibility-kit.css">
 </head>
 <body>
 
@@ -62,6 +63,14 @@ html, body {
             setup(window["TSC"]);
         });
     }(window));
+</script>
+  <script src="../../accessibility-kit/accessibility-kit.js"></script>
+<script>
+  AccessibilityKit.init({
+    position: 'bottom-right',
+    language: 'es',
+    savePreferences: true
+  });
 </script>
 </body>
 </html>

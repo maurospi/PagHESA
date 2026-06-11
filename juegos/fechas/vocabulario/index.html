@@ -1,15 +1,17 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es-CO">
 <!-- Same structure as Reconocimiento -->
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Juego Fechas - Vocabulario">
-    <meta name="author" content="Hablando EnSe�as">
+    <meta name="author" content="Hablando EnSeñas">
     <link rel="icon" href="../../../images/Logo/manoM.png">
-    <title>Fechas - Vocabulario | Hse�as</title>
+    <title>Fechas - Vocabulario | Hablando EnSeñas</title>
 
+    <link rel="stylesheet" href="../../../accesibilidad/css/accessibility.css">
+    <link rel="stylesheet" href="../../../accesibilidad/css/style.css">
     <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="../../../css/style.css">
     <link rel="stylesheet" type="text/css" href="../../../css/main.css">
@@ -18,7 +20,7 @@
     <link rel="stylesheet" type="text/css" href="../../../css/animate.css">
     <link rel="stylesheet" type="text/css" href="../../../css/prettyPhoto.css">
     <link rel="stylesheet" type="text/css" href="../../../css/font-awesome.css">
-    <link href="../../../css/gifs-se�as.css" rel="stylesheet">
+    <link href="../../../css/gifs-señas.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">`r`n
     <link rel="stylesheet" href="css/navbar.css">
 
@@ -27,6 +29,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Oswald&display=swap"
         rel="stylesheet">
+  <link rel="stylesheet" href="../../../accessibility-kit/accessibility-kit.css">
 </head>
 
 <body data-spy="scroll" data-target=".navbar-default" data-offset="100">
@@ -35,7 +38,7 @@
         <div class="row loader">
             <div class="loader-icon"></div>
         </div>
-        <img id="image" src="../../../images/Logo/marcadeagua.png" alt="Logo Hablando Ense�as de carga">
+        <img id="image" src="../../../images/Logo/marcadeagua.png" alt="Logo Hablando Enseñas de carga">
         <div id="progress-text">Cargando <span>0%</span></div>
     </div>
 
@@ -75,8 +78,8 @@
             <div class="col-md-8 col-md-offset-2">
                 <div class="heading">
                     <center><span><img style="height: 150px; width: 200px; text-align: center;"
-                                src="../../../gifs/aprende-se�as-jugandotransparente-borde.gif"
-                                alt="Gif aprende se�as jugando"></span></center>
+                                src="../../../gifs/aprende-señas-jugandotransparente-borde.gif"
+                                alt="Gif aprende señas jugando"></span></center>
                     <h2>Juego: <span>Vocabulario</span></h2>
                     <div class="line"></div>
                     <p style="text-align:center;">Ordena las letras para formar la palabra</p>
@@ -101,7 +104,7 @@
     <footer id="footer">
         <div class="bg-sec">
             <div class="container">
-                <h2>S�GUENOS EN <strong>NUESTRAS </strong>REDES SOCIALES!</h2>
+                <h2>SñGUENOS EN <strong>NUESTRAS </strong>REDES SOCIALES!</h2>
             </div>
         </div>
     </footer>
@@ -118,7 +121,7 @@
             <!-- Socials preserved -->
         </div>
         <div class="footercopy">
-            <p>&copy; <span id="year">2025</span> Hablando <span>Ense�as</span> | Todos los derechos reservados</p>
+            <p>&copy; <span id="year">2025</span> Hablando <span>Enseñas</span> | Todos los derechos reservados</p>
         </div>
     </footer>
 
@@ -132,6 +135,10 @@
 
     <script src="../../js/data.js"></script>
     <script src="js/game.js"></script>
+<!-- Accessibility Panel -->
+<div id="hesa-a11y-root"></div>
+<script src="../../../accesibilidad/js/accessibility.js"></script>
+<script src="../../../accesibilidad/js/speech.js"></script>
 </body>
 
 </html>

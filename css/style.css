@@ -4369,88 +4369,190 @@ button.btningresoplat:hover::before {
 	color: #a3c34ccc;
 }
 
-/* Aprende Jugando Section Styles - Vibrant & Interactive */
-#learn-playing {
-	position: relative;
-	padding: 120px 0;
-	/* Soft but colorful gradient background */
-	background: linear-gradient(135deg, #fff 0%, #f0f9ff 50%, #e6ffe6 100%);
-	overflow: hidden;
-	/* Separation borders */
-	border-top: 4px solid;
-	border-bottom: 4px solid;
-	border-image: linear-gradient(90deg, #2c3e50b9, #ffffff, #a3c34cb9) 1;
-	margin-bottom: 50px;
-	/* Space before contact section */
-}
+   /* ===== SECTION ===== */
+    .aprende-section {
+      padding: 64px 40px 72px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+ 
+ 
+    .aprende-title-underline {
+      display: block;
+      width: 56px;
+      height: 3px;
+      background: linear-gradient(90deg, #a8c23b, #3d6b62);
+      margin: 10px auto 40px;
+      border-radius: 2px;
+    }
+ 
+    /* ===== HERO ROW ===== */
+    .aprende-hero {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: center;
+      margin-bottom: 48px;
+    }
+ 
+    /* Video */
+    .aprende-video {
+      position: relative;
+      background: #111;
+      border-radius: 16px;
+      overflow: hidden;
+      aspect-ratio: 16 / 9;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+    }
+ 
+    .aprende-video video,
+    .aprende-video-placeholder {
+      width: 100%;
+      height: 100%;
+      border: none;
+      display: block;
+    }
+ 
+    .aprende-video-placeholder {
+      background: #1a1a1a;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+ 
+    .aprende-yt-btn {
+      width: 68px;
+      height: 48px;
+      background: #ff0000;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+ 
+    .aprende-yt-btn svg {
+      fill: #fff;
+      width: 22px;
+      height: 22px;
+      margin-left: 3px;
+    }
+ 
 
-/* Decorative background shapes */
-#learn-playing::before,
-#learn-playing::after {
-	content: '';
-	position: absolute;
-	width: 300px;
-	height: 300px;
-	border-radius: 50%;
-	z-index: 1;
-	opacity: 0.1;
-}
-
-
-
-.learn-playing-card {
-	background: rgba(255, 255, 255, 0.95);
-	border-radius: 30px;
-	padding: 60px;
-	box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
-	transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-	position: relative;
-	z-index: 2;
-	border: 2px solid transparent;
-	background-clip: padding-box;
-	/* Animated colorful border effect on hover would be cool, but simple border for now */
-}
-
-/* Interactive Card Hover */
-.learn-playing-card:hover {
-	transform: translateY(-15px) scale(1.02);
-	box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
-	border-color: #a3c34c;
-	/* Highlight color */
-}
-
-.learn-playing-card .heading h3 {
-	text-transform: uppercase;
-	background: linear-gradient(90deg, #2c3e50, #345c5c);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-	margin-top: 20px;
-	font-size: 24px;
-}
-
-
-.learn-text {
-	font-size: 18px;
-	line-height: 1.8;
-	color: #444;
-	margin-bottom: 30px;
-	text-align: justify;
-	/* Better alignment for block text */
-	border-left: 5px solid #a3c34c;
-	padding-left: 20px;
-	background: #f9f9f9;
-	padding: 20px;
-	border-radius: 0 10px 10px 0;
-}
-
-.learn-text p {
-	margin: 0;
-}
-
-.learn-text strong {
-	color: #345c5c;
-	font-size: 20px;
-}
+ 
+    /* ===== CARDS GRID ===== */
+    .aprende-cards-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-bottom: 48px;
+    }
+ 
+    .aprende-card {
+      background: #fff;
+      border-radius: 14px;
+      padding: 22px 20px;
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      transition: box-shadow 0.2s, transform 0.2s;
+      border-left: 3px solid transparent;
+    }
+ 
+    .aprende-card:hover {
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+      transform: translateY(-2px);
+      border-left-color: #a8c23b;
+    }
+ 
+    .aprende-card-icon {
+      width: 48px;
+      height: 48px;
+      min-width: 48px;
+      background: #eef3e4;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      line-height: 1;
+    }
+ 
+    .aprende-card-body {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+ 
+    .aprende-card-title {
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      color: #2d4f48;
+      text-transform: uppercase;
+    }
+ 
+    .aprende-card-desc {
+      font-size: 13.5px;
+      color: #666;
+      line-height: 1.5;
+    }
+ 
+    /* ===== CTA ===== */
+    .aprende-cta-wrapper {
+      display: flex;
+      justify-content: center;
+    }
+ 
+    .aprende-cta-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: #2d4f48;
+      color: #fff;
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+      padding: 16px 40px;
+      border-radius: 50px;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.25s ease, color 0.25s ease, transform 0.15s;
+    }
+ 
+    .aprende-cta-btn:hover {
+      background: #a8c23b;
+      color: #fff;
+      transform: translateY(-1px);
+    }
+ 
+    .aprende-cta-icon {
+      font-size: 18px;
+    }
+ 
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 768px) {
+      .aprende-section {
+        padding: 48px 20px 56px;
+      }
+ 
+      .aprende-hero {
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+ 
+      .aprende-cards-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+    }
+ 
+    @media (max-width: 900px) and (min-width: 769px) {
+      .aprende-cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
 
 /* Button with rainbow hover effect */
 .btn-game-cta {
@@ -4488,77 +4590,6 @@ button.btningresoplat:hover::before {
 	transition: width 0.4s ease;
 	z-index: -1;
 	border-radius: 30px;
-}
-
-
-/* ========================================================================
-   New Learn Playing Section styles (Formal & Clean)
-   Primary: #345c5c
-   Accent: #a3c34c
- ========================================================================== */
-
-#learn-playing {
-	padding: 40px 0;
-	/* Reduced from 80px */
-	background-color: #ffffff;
-	font-family: 'Merriweather', serif;
-}
-
-.learn-playing-card {
-	background: #ffffff;
-	padding: 20px;
-	border-radius: 20px;
-	/* Slight radius for softness */
-	/* Subtle glow to make it 'llamativo' without being a modal */
-	box-shadow: 0 0 40px rgba(163, 195, 76, 0.15);
-	border: 1px solid rgba(52, 92, 92, 0.05);
-	position: relative;
-	overflow: hidden;
-	text-align: center;
-}
-
-/* Removing gradient border and effects for formal look */
-.learn-playing-card::after {
-	display: none;
-}
-
-.learn-playing-card:hover {
-	transform: none;
-	/* Slightly stronger glow on hover */
-	box-shadow: 0 0 50px rgba(163, 195, 76, 0.25);
-}
-
-.learn-playing-card::before {
-	display: none;
-}
-
-.learn-playing-card .heading h2 {
-	color: #345c5c;
-	font-weight: 700;
-	margin-bottom: 10px;
-	font-size: 36px;
-}
-
-.learn-playing-card .heading span {
-	color: #a3c34c;
-}
-
-.learn-playing-card .heading .line {
-	display: none;
-}
-
-/*.learn-playing-card .learn-text p {
-	font-size: 18px;
-	line-height: 1.8;
-	color: #555;
-	margin-bottom: 30px;
-	max-width: 800px;
-	margin-left: auto;
-	margin-right: auto;
-}*/
-
-.learn-playing-card .learn-text strong {
-	color: #345c5c;
 }
 
 /* Button: White to Green transition - Resized */
@@ -4600,20 +4631,6 @@ button.btningresoplat:hover::before {
 .floating-icon img {
 	border-radius: 15px;
 	transition: transform 0.5s ease;
-}
-
-.learn-playing-card:hover .floating-icon img {
-	transform: scale(1.05) rotate(2deg);
-}
-
-/* Utility classes for Learn Playing section */
-.learn-subtitle {
-	margin-top: 25px;
-	color: #345c5c;
-	font-weight: bold;
-	letter-spacing: 1px;
-	font-size: 24px;
-	/* Added font-size for better header hierarchy */
 }
 
 .flex-center-row {

@@ -303,3 +303,66 @@ $('#slider-parallax').stellar();
  
 });
 	
+// ANIMATION RECONSTRUCTION\n
+(function() {
+    'use strict';
+
+    // Función para inicializar todas las animaciones
+    function initAnimations() {
+        const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches || 
+                             localStorage.getItem('hesa-a11y-pause-animations') === 'true';
+
+        // 1. Inicializar WOW.js (si existe)
+        if (typeof WOW !== 'undefined') {
+            new WOW({
+                boxClass: 'wow',
+                animateClass: 'animated',
+                offset: 100,
+                mobile: true,
+                live: true,
+                callback: function(box) {
+                    if (reduceMotion) {
+                        box.style.animationName = 'none';
+                        box.style.visibility = 'visible';
+                    }
+                }
+            }).init();
+        }
+
+        // 2. Inicializar AOS (si existe)
+        if (typeof AOS !== 'undefined') {
+            AOS.init({
+                duration: 800,
+                easing: 'ease-in-out',
+                once: true,
+                disable: reduceMotion
+            });
+        }
+
+        // 3. Inicializar Swiper (si existe)
+        if (typeof Swiper !== 'undefined') {
+            document.querySelectorAll('.swiper-container, .swiper').forEach(el => {
+                new Swiper(el, {
+                    autoplay: reduceMotion ? false : { delay: 5000 },
+                    loop: true,
+                    pagination: { el: '.swiper-pagination', clickable: true },
+                    navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' }
+                });
+            });
+        }
+    }
+
+    // Ejecutar cuando el DOM esté listo
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initAnimations);
+    } else {
+        initAnimations();
+    }
+
+    // Escuchar cambios en accesibilidad
+    window.addEventListener('storage', (e) => {
+        if (e.key === 'hesa-a11y-pause-animations') {
+            location.reload(); // Recargar para aplicar cambios de animación de forma limpia
+        }
+    });
+})();

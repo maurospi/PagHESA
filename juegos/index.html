@@ -1,40 +1,44 @@
-﻿<!DOCTYPE html>
-<html lang="es">
+<!DOCTYPE html>
 
+<html lang="es-CO">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Juegos Lengua de Señas Colombiana">
-    <meta name="author" content="Hablando EnSeñas">
-    <link rel="icon" href="../images/Logo/manoM.png">
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <meta content="Juegos Lengua de Señas Colombiana" name="description"/>
+    <meta content="Hablando EnSeñas" name="author"/>
+    <link href="../images/Logo/manoM.png" rel="icon"/>
     <title>Juegos | Hablando EnSeñas</title>
 
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Juegos de Hablando Enseñas">
+    <meta property="og:description" content="Aprende jugando con nuestros juegos interactivos de Lengua de Señas Colombiana. ¡Diviértete mientras aprendes a comunicarte en LSC!">
+    <meta property="og:url" content="https://hablandoensenas.com/juegos">
+    <meta property="og:locale" content="es_CO">
     <!--Bootstrap-->
-    <link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+    <link href="../css/bootstrap.css" rel="stylesheet" type="text/css"/>
     <!--Stylesheets-->
-    <link rel="stylesheet" type="text/css" href="../css/style.css">
-    <link rel="stylesheet" type="text/css" href="../css/main.css">
-    <link rel="stylesheet" type="text/css" href="../css/estilos.css">
+    <link href="../css/style.css" rel="stylesheet" type="text/css"/>
+    <link href="../css/main.css" rel="stylesheet" type="text/css"/>
+    <link href="../css/estilos.css" rel="stylesheet" type="text/css"/>
     <!--Responsive-->
-    <link rel="stylesheet" type="text/css" href="../css/responsive.css">
+    <link href="../css/responsive.css" rel="stylesheet" type="text/css"/>
     <!--Animation-->
-    <link rel="stylesheet" type="text/css" href="../css/animate.css">
+    <link href="../css/animate.css" rel="stylesheet" type="text/css"/>
     <!--Prettyphoto-->
-    <link rel="stylesheet" type="text/css" href="../css/prettyPhoto.css">
+    <link href="../css/prettyPhoto.css" rel="stylesheet" type="text/css"/>
     <!--Font-Awesome-->
-    <link rel="stylesheet" type="text/css" href="../css/font-awesome.css">
-    <link href="../css/gifs-señas.css" rel="stylesheet">
+    <link href="../css/font-awesome.css" rel="stylesheet" type="text/css"/>
+    <link href="../css/gifs-señas.css" rel="stylesheet"/>
     <!--Local Game Styles-->
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/navbar.css">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Oswald&display=swap"
-        rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet"/>
+    <link href="css/navbar.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&amp;family=Oswald&amp;display=swap" rel="stylesheet"/>
+    <!--Accessibility Kit-->
+    <link href="../accesibilidad/style.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="../accesibilidad/css/accessibility.css">
 </head>
-
 <body data-spy="scroll" data-target=".navbar-default" data-offset="100">
 
     <!--Preloader-->
@@ -42,7 +46,7 @@
         <div class="row loader">
             <div class="loader-icon"></div>
         </div>
-        <img id="image" src="../images/Logo/marcadeagua.png" alt="Logo Hablando Ense�as de carga">
+        <img id="image" src="../images/Logo/marcadeagua.png" alt="Logo Hablando Enseñas de carga">
         <div id="progress-text">Cargando <span>0%</span></div>
     </div>
 
@@ -95,7 +99,6 @@
             </div>
         </div>
     </header>
-
     <section id="games" style="padding-top: 100px; min-height: 80vh;">
         <div class="container">
             <div class="col-md-8 col-md-offset-2">
@@ -237,7 +240,6 @@
 
         </div>
     </section>
-
     <footer id="footer">
         <div class="bg-sec">
             <div class="container">
@@ -315,6 +317,9 @@
         });
     </script>
 
+<!-- Accessibility Panel -->
+<div id="hesa-a11y-root"></div>
+<script src="../accesibilidad/js/accessibility.js"></script>
+<script src="../accesibilidad/js/speech.js"></script>
 </body>
-
 </html>

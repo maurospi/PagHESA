@@ -1,0 +1,202 @@
+/* Impact mobile */
+.impact-divider {
+  display: none;
+}
+
+
+/* ============================================
+   SM: >= 576px
+   ============================================ */
+@media (min-width: 576px) {
+  .hero-visual-grid {
+    max-width: 420px;
+  }
+
+  .about-features {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .a11y-speech-btn {
+    font-size: var(--fs-xs);
+  }
+}
+
+/* ============================================
+   MD: >= 768px
+   ============================================ */
+@media (min-width: 768px) {
+  .hero-section {
+    text-align: left;
+  }
+
+  .hero-subtitle {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .hero-ctas {
+    justify-content: flex-start;
+  }
+
+  .hero-stats {
+    justify-content: flex-start;
+  }
+
+  .hero-visual-grid {
+    max-width: 100%;
+    margin-top: 0;
+  }
+
+  .hero-floating-card {
+    display: block;
+  }
+
+  .hero-blob-1 {
+    width: 300px;
+    height: 300px;
+  }
+
+  .hero-blob-2 {
+    width: 200px;
+    height: 200px;
+  }
+
+  .hero-blob-3 {
+    display: block;
+  }
+
+  .about-media-grid {
+    grid-template-columns: 1fr 1fr;
+    margin-top: 0;
+  }
+
+  .about-media-item.item-small {
+    aspect-ratio: 1;
+  }
+
+  .impact-divider {
+    display: block;
+  }
+
+  .footer-bottom {
+    flex-direction: row;
+    text-align: left;
+  }
+}
+
+/* ============================================
+   LG: >= 992px
+   ============================================ */
+@media (min-width: 992px) {
+  .navbar-main .navbar-collapse {
+    background: transparent;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 0;
+    margin-top: 0;
+    border: none;
+  }
+
+  .navbar-nav .nav-cta {
+    margin-left: 0.5rem;
+    margin-top: 0;
+    display: inline-flex;
+  }
+
+  .hero-blob-1 {
+    width: 400px;
+    height: 400px;
+  }
+
+  .hero-blob-2 {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+/* ============================================
+   XL: >= 1200px
+   ============================================ */
+@media (min-width: 1200px) {
+  .hero-visual-grid {
+    max-width: 560px;
+  }
+
+  .hero-floating-card.float-1 {
+    right: -15%;
+  }
+
+  .hero-floating-card.float-2 {
+    left: -12%;
+  }
+}
+
+/* ============================================
+   XXL: >= 1400px
+   ============================================ */
+@media (min-width: 1400px) {
+  :root {
+    --section-padding: 7rem;
+  }
+}
+
+/* ============================================
+   ULTRA WIDE: >= 1920px
+   ============================================ */
+@media (min-width: 1920px) {
+  :root {
+    --section-padding: 8rem;
+  }
+
+  .container {
+    max-width: 1400px;
+  }
+
+  .hero-visual-grid {
+    max-width: 640px;
+  }
+}
+
+/* ============================================
+   TOUCH DEVICES
+   ============================================ */
+@media (hover: none) {
+  .service-card:hover,
+  .mvo-card:hover,
+  .game-card:hover,
+  .testimonial-card:hover,
+  .about-media-item:hover,
+  .hero-media-card:hover {
+    transform: none;
+  }
+
+  .btn-primary-custom:hover,
+  .btn-outline-custom:hover,
+  .btn-secondary-custom:hover,
+  .btn-white:hover,
+  .btn-cta-large:hover {
+    transform: none;
+  }
+}
+
+/* ============================================
+   LANDSCAPE MOBILE
+   ============================================ */
+@media (max-height: 500px) and (orientation: landscape) {
+  .hero-section {
+    min-height: auto;
+    padding-top: calc(var(--navbar-height) + 1rem);
+    padding-bottom: 2rem;
+  }
+
+  .hero-blob {
+    display: none;
+  }
+}
+
+/* ============================================
+   DARK MODE PREFERENCE (optional future use)
+   ============================================ */
+@media (prefers-color-scheme: dark) {
+  /* Reserved for future dark mode implementation */
+}

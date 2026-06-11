@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es-CO">
 <!-- Same structure as Reconocimiento -->
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Juego Saludos - Vocabulario">
-    <meta name="author" content="Hablando EnSe�as">
+    <meta name="author" content="Hablando EnSeñas">
     <link rel="icon" href="../../../images/Logo/manoM.png">
-    <title>Saludos - Vocabulario | Hse�as</title>
+    <title>Saludos - Vocabulario | Hablando EnSeñas</title>
 
     <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="../../../css/style.css">
@@ -27,6 +27,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Oswald&display=swap"
         rel="stylesheet">
+  <link rel="stylesheet" href="../../../accessibility-kit/accessibility-kit.css">
 </head>
 
 <body data-spy="scroll" data-target=".navbar-default" data-offset="100">
@@ -35,7 +36,7 @@
         <div class="row loader">
             <div class="loader-icon"></div>
         </div>
-        <img id="image" src="../../../images/Logo/marcadeagua.png" alt="Logo Hablando Ense�as de carga">
+        <img id="image" src="../../../images/Logo/marcadeagua.png" alt="Logo Hablando Enseñas de carga">
         <div id="progress-text">Cargando <span>0%</span></div>
     </div>
 
@@ -168,6 +169,10 @@
 
         <script src="../../js/data.js"></script>
         <script src="js/game.js"></script>
+<!-- Accessibility Panel -->
+<div id="hesa-a11y-root"></div>
+<script src="../../../accesibilidad/js/accessibility.js"></script>
+<script src="../../../accesibilidad/js/speech.js"></script>
 </body>
 
 </html>
