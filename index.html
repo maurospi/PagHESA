@@ -80,7 +80,7 @@
                   href="gifs-señas.css"><span><img style="height: 100px; width: 125;" src="gifs/nuestrosserviciosM.gif"
                       alt="Gif Nuestros Servicios señado por una persona sorda"></span>Nuestros Servicios</a></li>
 
-              <li class="scroll button"><a href="#learn-playing" id="numero4" class="tooltip4"
+              <li class="scroll button"><a href="juegos/index.html" id="numero4" class="tooltip4"
                   href="gifs-señas.css" style="color: #a3c34c;"><span><img style="margin-left: 20px; height: 101px; width: 126;"
                       src="gifs/aprende-señas-jugandotransparente-borde.gif"
                       alt="Gif Contactenos señado por una persona sorda"></span>Aprende jugando</a></li>
@@ -1019,61 +1019,83 @@
           </div>
           <button class="buttonb button--pallene wow bounceInRight" type="submit">Enviar</button>
         </form>-->
-          <form id="main-contact-form" name="contact-form" method="post" action="sendmailconfirmation.php"
-            onsubmit="return validarTextarea()">
-            <div class="row wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
-              <div class="col-sm-6">
+<form id="main-contact-form" name="contact-form" method="post"
+          action="sendmailconfirmation1.php"
+          onsubmit="return validarTextarea()">
+ 
+        <!-- Nombre + Correo -->
+        <div class="row">
+            <div class="col-sm-6">
                 <div class="form-group">
-                  <input style="color: rgb(0, 0, 0);" type="text" name="name" class="form-control" placeholder="Nombre"
-                    required="required">
+                    <input style="color: rgb(0,0,0);"
+                           type="text" name="name" class="form-control"
+                           placeholder="Nombre" required>
                 </div>
-              </div>
-              <div class="col-sm-6">
+            </div>
+            <div class="col-sm-6">
                 <div class="form-group">
-                  <input style="color: rgb(0, 0, 0);" type="email" name="email" class="form-control"
-                    placeholder="Correo" required="required">
+                    <input style="color: rgb(0,0,0);"
+                           type="email" name="email" class="form-control"
+                           placeholder="Correo" required>
                 </div>
-              </div>
             </div>
-            <div class="form-group">
-              <input style="color: rgb(0, 0, 0);" type="text" name="phone" class="form-control"
-                placeholder="Teléfono ej: 3012345678" required pattern="\d{10}" maxlength="10" inputmode="numeric"
-                onkeypress="return event.charCode >= 48 && event.charCode <= 57"
-                oninput="this.value = this.value.replace(/[^0-9]/g, '')"
-                oninvalid="this.setCustomValidity('El número de teléfono debe tener exactamente 10 dígitos, en caso de tener un prefijo escribirlo en el mensaje')"
-                oninput="this.setCustomValidity('')">
-            </div>
-            <div class="form-group">
-              <input style="color: rgb(0, 0, 0);" type="text" name="subject" class="form-control" placeholder="Título"
-                required="required">
-            </div>
-            <select name="reason" required>
-              <option value="" disabled selected>Seleccione el requerimiento</option>
-              <option value="Consulta">Consulta</option>
-              <option value="Capacitación">Capacitación</option>
-              <option value="Provisión interpretes">Provisión de Intérpretes LSC</option>
-              <option value="Contenidos Accesibles">Contenidos Accesibles</option>
-              <option value="Ajustes Razonables">Ajustes Razonables</option>
-              <option value="Otro">Otro</option>
-            </select>
-            <div class="form-group">
-              <textarea style="color: rgb(0, 0, 0);" name="message" id="message" class="form-control" rows="4"
-                placeholder="Escribe tu mensaje" required minlength="25"></textarea>
-            </div>
-            <button class="buttonb button--pallene wow bounceInRight" type="submit">Enviar</button>
-          </form>
-
-          <script>
-            function validarTextarea() {
-              const textarea = document.getElementById("message").value;
-              const regex = /[A-Za-z]/; // Al menos una letra
-              if (!regex.test(textarea.trim())) {
-                alert("El mensaje debe contener al menos una letra y no solo espacios.");
-                return false;
-              }
-              return true;
-            }
-          </script>
+        </div>
+ 
+        <!-- Teléfono -->
+        <div class="form-group">
+            <input style="color: rgb(0,0,0);"
+                   type="text" name="phone" class="form-control"
+                   placeholder="Teléfono ej: 3012345678"
+                   required
+                   pattern="\d{10}"
+                   maxlength="10"
+                   inputmode="numeric"
+                   onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                   oninput="this.value = this.value.replace(/[^0-9]/g, ''); this.setCustomValidity('');"
+                   oninvalid="this.setCustomValidity('El número de teléfono debe tener exactamente 10 dígitos, en caso de tener un prefijo escríbelo en el mensaje')">
+        </div>
+ 
+        <!-- Título -->
+        <div class="form-group">
+            <input style="color: rgb(0,0,0);"
+                   type="text" name="subject" class="form-control"
+                   placeholder="Título" required>
+        </div>
+ 
+        <!-- Requerimiento -->
+        <select name="reason" required>
+            <option value="" disabled selected>Seleccione el requerimiento</option>
+            <option value="Consulta">Consulta</option>
+            <option value="Capacitación">Capacitación</option>
+            <option value="Provisión interpretes">Provisión de Intérpretes LSC</option>
+            <option value="Contenidos Accesibles">Contenidos Accesibles</option>
+            <option value="Ajustes Razonables">Ajustes Razonables</option>
+            <option value="Otro">Otro</option>
+        </select>
+ 
+        <!-- Mensaje -->
+        <div class="form-group">
+            <textarea style="color: rgb(0,0,0);"
+                      name="message" id="message" class="form-control"
+                      rows="4" placeholder="Escribe tu mensaje"
+                      required minlength="25"></textarea>
+        </div>
+ 
+        <button class="buttonb" type="submit">Enviar</button>
+    </form>
+</div>
+ 
+<script>
+    function validarTextarea() {
+        const textarea = document.getElementById("message").value;
+        const regex = /[A-Za-z]/; // Al menos una letra
+        if (!regex.test(textarea.trim())) {
+            alert("El mensaje debe contener al menos una letra y no solo espacios.");
+            return false;
+        }
+        return true;
+    }
+</script>
 
         </div>
       </div>
