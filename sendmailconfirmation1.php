@@ -46,8 +46,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <head>
     <meta charset='UTF-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-    <title>Aviso</title>
+    <title>Aviso envio</title>
     <style>
+        .obody {
+  background-image: url('./images/Logo/logoo.png');
+  background-repeat: no-repeat;
+  background-position: center;
+}
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Segoe UI', Arial, sans-serif; background: #f4f4f4; display: flex; align-items: center; justify-content: center; min-height: 100vh; overflow: hidden; }
         .overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.6); display: flex; align-items: center; justify-content: center; z-index: 9999; opacity: 0; animation: fadeIn 0.4s forwards; backdrop-filter: blur(3px); padding: 20px; }
@@ -56,9 +61,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         @keyframes popIn { to { transform: scale(1); opacity: 1; } }
         .popup-icon { font-size: 60px; margin-bottom: 20px; display: block; animation: bounce 2s infinite; }
         @keyframes bounce { 0%, 20%, 50%, 80%, 100% {transform: translateY(0);} 40% {transform: translateY(-10px);} 60% {transform: translateY(-5px);} }
-        .popup h2 { color: #4a7c10; margin-bottom: 15px; font-size: 1.5rem; font-weight: 700; }
+        .popup h2 { color: #a3c34c; margin-bottom: 15px; font-size: 1.5rem; font-weight: 700; }
         .popup p { color: #555; font-size: 1rem; line-height: 1.6; margin-bottom: 30px; white-space: pre-line; }
-        .popup button { background-color: #a3c34c; color: #fff; border: none; border-radius: 8px; padding: 14px 45px; font-size: 1.1rem; font-weight: 600; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(163, 195, 76, 0.3); width: 100%; }
+        .popup button { background-color: #a3c34c; color: #fff; border: none; border-radius: 8px; padding: 14px 45px; font-size: 1.1rem; font-weight: 600; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 4px 15px #345c5c; width: 100%; }
         @media (min-width: 480px) { .popup button { width: auto; } }
         .popup button:hover { background-color: #82a032; transform: translateY(-2px); box-shadow: 0 6px 20px rgba(163, 195, 76, 0.4); }
     </style>
@@ -66,8 +71,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <body>
     <div class='overlay'>
         <div class='popup'>
-            <div class='popup-icon'>✉️</div>
-            <h2>Hablando EnSeñas</h2>
+            <div class='popup-icon'><img src='./images/Logo/logoo.png'></div>
+            <h2>Se Ha Enviado Tu Mensaje Correctamente</h2>
             <p>$escaped</p>
             <button onclick=\"window.location.href='$redirect'\">Cerrar</button>
         </div>

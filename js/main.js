@@ -2,8 +2,8 @@ jQuery(function($) {'use strict',
 
 	
 	// all Parallax Section
-	$(window).load(function(){'use strict',
-		$("#services").parallax("50%", 0.3);
+	$(window).load(function(){'use strict';
+		$("#servicios").parallax("50%", 0.3);
 		$("#clients").parallax("50%", 0.3);
 	});
 	

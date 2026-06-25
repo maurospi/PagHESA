@@ -1378,8 +1378,8 @@ ul.nav li.active a:before {
 }
 
 /*About-stylesheets-include-here*/
-#contact,
-#about-us {
+#contacto,
+#quienes-somos {
 	position: relative;
 	background-color: rgba(255, 255, 255, 0.397);
 	/* Fondo con transparencia */
@@ -1387,8 +1387,8 @@ ul.nav li.active a:before {
 }
 
 /* Aplica la marca de agua solo con ::before */
-#contact::before,
-#about-us::before {
+#contacto::before,
+#quienes-somos::before {
 	content: "";
 	position: absolute;
 	top: 0;
@@ -1404,9 +1404,9 @@ ul.nav li.active a:before {
 	z-index: -1;
 }
 
-/* Asegura que el contenido de #contact y #about-us esté por encima */
-#contact>*,
-#about-us>* {
+/* Asegura que el contenido de #contacto y #quienes-somos esté por encima */
+#contacto>*,
+#quienes-somos>* {
 	position: relative;
 	z-index: 1;
 }
@@ -1521,7 +1521,7 @@ ul.nav li.active a:before {
 }
 
 /*Service-stylesheets-include-here*/
-#service {
+#servicio {
 	text-align: center;
 	padding: 2% 0%;
 	display: none;
@@ -1531,7 +1531,7 @@ ul.nav li.active a:before {
 	transition: opacity 0.5s ease-out;
 }
 
-#servicewrite {
+#servicio-escrito {
 	text-align: center;
 	padding: 2% 0%;
 	display: none;
@@ -1586,7 +1586,7 @@ ul.nav li.active a:before {
 	margin-top: 80px;
 }
 
-#services {
+#servicios {
 	padding: 100px 0 75px;
 }
 
@@ -2242,7 +2242,7 @@ a.btn-blg:hover {
 }
 
 /*Contact-stylesheets-include-here*/
-#contact {
+#contacto {
 	text-align: center;
 	padding: 3% 0% 0% 2%;
 }
@@ -2318,7 +2318,7 @@ textarea.form-control {
 }
 
 @media (max-width: 768px) {
-	#contact {
+	#contacto {
 		padding: 5%;
 	}
 
