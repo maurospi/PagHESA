@@ -77,74 +77,107 @@
 //        }
 //
 
-        // Mostrar solo el servicio 1
+        // Mostrar/ocultar el video de objetivos (servicio 1)
         function toggleobjetivos() {
-            const service1 = document.getElementById("service");
+            const service1 = document.getElementById("servicio");
+            if (!service1) return;
 
-            service1.style.display = "block";
-            setTimeout(() => {
-                service1.style.opacity = "1"; // Desvanecer al mostrarse
-            }, 10);
+            // Si está oculto, lo mostramos; si está visible, lo ocultamos
+            if (service1.style.display === "none" || getComputedStyle(service1).display === "none") {
+                service1.style.display = "block";
+                setTimeout(() => {
+                    service1.style.opacity = "1";
+                }, 10);
+            } else {
+                service1.style.opacity = "0";
+                setTimeout(() => {
+                    service1.style.display = "none";
+                }, 500);
+            }
         }
 
-        // Mostrar solo el servicio 2
+        // Mostrar/ocultar los objetivos escritos (servicio 2)
         function toggleobjetivose() {
-            const service2 = document.getElementById("servicewrite");
+            const service2 = document.getElementById("servicio-escrito");
+            if (!service2) return;
 
-            service2.style.display = "block";
-            setTimeout(() => {
-                service2.style.opacity = "1"; // Desvanecer al mostrarse
-            }, 10);
+            if (service2.style.display === "none" || getComputedStyle(service2).display === "none") {
+                service2.style.display = "block";
+                setTimeout(() => {
+                    service2.style.opacity = "1";
+                }, 10);
+            } else {
+                service2.style.opacity = "0";
+                setTimeout(() => {
+                    service2.style.display = "none";
+                }, 500);
+            }
         }
 
         // Mostrar ambos servicios
         function toggleambos() {
-            const service1 = document.getElementById("service");
-            const service2 = document.getElementById("servicewrite");
+            const service1 = document.getElementById("servicio");
+            const service2 = document.getElementById("servicio-escrito");
 
-            service1.style.display = "block";
-            service2.style.display = "block";
-
-            setTimeout(() => {
-                service1.style.opacity = "1"; // Desvanecer al mostrarse
-                service2.style.opacity = "1"; // Desvanecer al mostrarse
-            }, 10);
+            if (service1) {
+                service1.style.display = "block";
+                setTimeout(() => {
+                    service1.style.opacity = "1";
+                }, 10);
+            }
+            if (service2) {
+                service2.style.display = "block";
+                setTimeout(() => {
+                    service2.style.opacity = "1";
+                }, 10);
+            }
         }
 
-        // Ocultar solo el servicio 1
+        // Ocultar solo el servicio 1 (video)
         function ocultarvideoobjetivo() {
-            const service1 = document.getElementById("service");
+            const service1 = document.getElementById("servicio");
+            if (!service1) return;
 
-            service1.style.opacity = "0"; // Desvanecer al ocultarse
+            service1.style.opacity = "0";
             setTimeout(() => {
-                service1.style.display = "none"; // Ocultar el contenido después de la animación
-            }, 500); // Espera el tiempo de la animación de opacidad
+                service1.style.display = "none";
+            }, 500);
         }
 
-        // Ocultar solo el servicio 2
+        // Ocultar solo el servicio 2 (escrito)
         function ocultartextoobjetivo() {
-            const service2 = document.getElementById("servicewrite");
+            const service2 = document.getElementById("servicio-escrito");
+            if (!service2) return;
 
-            service2.style.opacity = "0"; // Desvanecer al ocultarse
+            service2.style.opacity = "0";
             setTimeout(() => {
-                service2.style.display = "none"; // Ocultar el contenido después de la animación
-            }, 500); // Espera el tiempo de la animación de opacidad
+                service2.style.display = "none";
+            }, 500);
         }
 
         // Ocultar ambos servicios
         function ocultarambos() {
-            const service1 = document.getElementById("service");
-            const service2 = document.getElementById("servicewrite");
+            const service1 = document.getElementById("servicio");
+            const service2 = document.getElementById("servicio-escrito");
 
-            service1.style.opacity = "0";
-            service2.style.opacity = "0";
+            if (service1) {
+                service1.style.opacity = "0";
+                setTimeout(() => {
+                    service1.style.display = "none";
+                }, 500);
+            }
 
-            setTimeout(() => {
-                service1.style.display = "none"; // Ocultar el contenido después de la animación
-                service2.style.display = "none"; // Ocultar el contenido después de la animación
-            }, 500); // Espera el tiempo de la animación de opacidad
+            if (service2) {
+                service2.style.opacity = "0";
+                setTimeout(() => {
+                    service2.style.display = "none";
+                }, 500);
+            }
 
-            document.getElementById("ocultarambos").style.display = "none";
-            document.getElementById("toggleambos").style.display = "inline-block";
+            const btnOcultar = document.getElementById("ocultarambos");
+            if (btnOcultar) btnOcultar.style.display = "none";
+            
+            const btnToggle = document.getElementById("toggleambos");
+            if (btnToggle) btnToggle.style.display = "inline-block";
         }
         
