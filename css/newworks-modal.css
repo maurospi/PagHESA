@@ -1,0 +1,154 @@
+/* ==========================================
+   MODAL / LIGHTBOX - Galería "Hablando EnSeñas"
+   Namespace: "hesLbx"
+   ========================================== */
+
+:root {
+  --hesLbx-primary: #345c5c;
+  --hesLbx-accent: #a3c34c;
+  --hesLbx-dark: #0f172a;
+  --hesLbx-muted: #64748b;
+}
+
+.hesLbx-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 20px;
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.35s ease, visibility 0.35s ease;
+}
+
+.hesLbx-overlay.hesLbx-active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.hesLbx-box {
+  background: #ffffff;
+  border-radius: 18px;
+  width: 100%;
+  max-width: 920px;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.35);
+  transform: translateY(30px) scale(0.97);
+  transition: transform 0.35s ease;
+  font-family: 'Merriweather', serif;
+}
+
+.hesLbx-overlay.hesLbx-active .hesLbx-box {
+  transform: translateY(0) scale(1);
+}
+
+.hesLbx-close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--hesLbx-dark);
+  color: #fff;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 5;
+}
+
+.hesLbx-media {
+  width: 100%;
+  background: #000;
+  border-radius: 18px 18px 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-height: 60vh;
+}
+
+.hesLbx-media-social {
+  background: #fff;
+  padding: 24px 16px;
+  max-height: none;
+}
+
+.hesLbx-body {
+  padding: 32px 36px 36px;
+}
+
+.hesLbx-badge {
+  display: inline-block;
+  background: var(--hesLbx-accent);
+  color: var(--hesLbx-dark);
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  padding: 5px 14px;
+  border-radius: 30px;
+  margin-bottom: 14px;
+  font-weight: 600;
+}
+
+.hesLbx-title {
+  font-family: 'Oswald', sans-serif;
+  color: var(--hesLbx-primary);
+  font-size: 1.6rem;
+  margin: 0 0 14px;
+}
+
+/* --- NUEVA ESTRUCTURA DE BOTONES PARA VISIBILIDAD TOTAL --- */
+
+.hesLbx-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 22px;
+  flex-wrap: wrap;
+}
+
+.hesLbx-link {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 12px 24px !important;
+  background-color: var(--hesLbx-primary) !important;
+  color: #ffffff !important; /* Blanco para máxima legibilidad */
+  text-decoration: none !important;
+  font-family: 'Oswald', sans-serif !important;
+  font-size: 0.9rem !important;
+  text-transform: uppercase;
+  border-radius: 30px !important;
+  font-weight: 500 !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+.hesLbx-link.hesLbx-link-secondary {
+  background-color: var(--hesLbx-accent) !important;
+  color: var(--hesLbx-dark) !important; /* Oscuro para contraste sobre verde claro */
+  font-weight: 700 !important;
+}
+
+.hesLbx-link span {
+  display: block !important;
+  color: inherit !important;
+}
+
+.hesLbx-link[hidden] {
+  display: none !important;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .hesLbx-box { border-radius: 14px; }
+  .hesLbx-body { padding: 24px 22px; }
+  .hesLbx-title { font-size: 1.25rem; }
+}

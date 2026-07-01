@@ -72,7 +72,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <div class='overlay'>
         <div class='popup'>
             <div class='popup-icon'><img src='./images/Logo/logoo.png'></div>
-            <h2>Se Ha Enviado Tu Mensaje Correctamente</h2>
+            <h2>Tu mensaje se ha enviado correctamente</h2>
             <p>$escaped</p>
             <button onclick=\"window.location.href='$redirect'\">Cerrar</button>
         </div>
@@ -84,16 +84,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Validaciones
     if (!preg_match("/^[a-zA-ZÀ-ÿ\s]+$/u", $name) || in_array($name, $nombres_bloqueados)) {
-        show_popup("Error: Nombre no válido.");
+        show_popup("Error: el nombre no es válido.");
     }
     if (in_array(strtolower($email), array_map('strtolower', $correos_bloqueados))) {
-        show_popup("Error: Correo no permitido.");
+        show_popup("Error: el correo no está permitido.");
     }
 
     // ── CONFIGURACIÓN SMTP (EDITAR AQUÍ) ────────────────────────────────────
     $smtp_host = 'mail.hablandoensenas.com'; // Cambiar por tu servidor SMTP
     $smtp_user = 'info@hablandoensenas.com'; // Cambiar por tu correo
-    $smtp_pass = 'KiaraPerro*';       // Cambiar por tu contraseña
+    $smtp_pass = 'KiaraPerro9779*';       // Cambiar por tu contraseña
     $smtp_port = 465;                        // 465 para SSL o 587 para TLS
     $smtp_secure = PHPMailer::ENCRYPTION_SMTPS; // Usar ENCRYPTION_STARTTLS si el puerto es 587
 
@@ -158,7 +158,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     } catch (Exception $e) {
         // Si hay un error, lo mostramos para depuración (solo en desarrollo) o mensaje genérico
-        show_popup("Error al enviar el mensaje. Por favor, contacta directamente a info@hablandoensenas.com\n\n(Detalle técnico: " . $mail->ErrorInfo . ")");
+        show_popup("Error al enviar el mensaje. Por favor, contacta directamente a info@hablandoensenas.com o a maurospinarev@gmail.com\n\n(Detalle técnico: " . $mail->ErrorInfo . ")");
     }
 }
 ?>

@@ -73,12 +73,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // **Validación del nombre**
     if (!preg_match("/^[a-zA-ZÀ-ÿ\s]+$/u", $name) || in_array($name, $nombres_bloqueados)) {
-        show_popup("Error: Nombre inválido o no permitido ($name).\n\nEn caso de algún error comunícate al correo hablandoensenas@gmail.com, info@hablandoensenas.com o maurospinarev@gmail.com");
+        show_popup("Error: el nombre no es válido o no está permitido ($name).\n\nSi hay algún error, comunícate al correo hablandoensenas@gmail.com, info@hablandoensenas.com o maurospinarev@gmail.com");
     }
 
     // **Validación del correo bloqueado (lista exacta)**
     if (in_array(strtolower($email), array_map('strtolower', $correos_bloqueados))) {
-        show_popup("Error: Este correo no está permitido ($email).\n\nEn caso de algún error comunícate al correo hablandoensenas@gmail.com, info@hablandoensenas.com o maurospinarev@gmail.com");
+        show_popup("Error: este correo no está permitido ($email).\n\nSi hay algún error, comunícate al correo hablandoensenas@gmail.com, info@hablandoensenas.com o maurospinarev@gmail.com");
     }
 
     // **Extraer dominio y extensión del correo**
@@ -87,22 +87,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // **Verificar dominio o extensión bloqueada**
     if (in_array($dominio_email, $dominios_bloqueados) || in_array($extension_email, $extensiones_bloqueadas)) {
-        show_popup("Error: No se permiten correos con este dominio o extensión ($email).\n\nEn caso de algún error comunícate al correo hablandoensenas@gmail.com, info@hablandoensenas.com o maurospinarev@gmail.com");
+        show_popup("Error: no se permiten correos con este dominio o extensión ($email).\n\nSi hay algún error, comunícate al correo hablandoensenas@gmail.com, info@hablandoensenas.com o maurospinarev@gmail.com");
     }
 
     // **Validación del título**
     if (empty($subject) || preg_match("/" . implode("|", $palabras_bloqueadas) . "/i", $subject)) {
-        show_popup("Error: El título no es válido.\n\nEn caso de algún error comunícate al correo hablandoensenas@gmail.com, info@hablandoensenas.com o maurospinarev@gmail.com");
+        show_popup("Error: el título no es válido.\n\nSi hay algún error, comunícate al correo hablandoensenas@gmail.com, info@hablandoensenas.com o maurospinarev@gmail.com");
     }
 
     // **Validación del motivo**
     if (empty($reason) || preg_match("/" . implode("|", $palabras_bloqueadas) . "/i", $reason)) {
-        show_popup("Error: El motivo no es válido.\n\nEn caso de algún error comunícate al correo hablandoensenas@gmail.com, info@hablandoensenas.com o maurospinarev@gmail.com");
+        show_popup("Error: el motivo no es válido.\n\nSi hay algún error, comunícate al correo hablandoensenas@gmail.com, info@hablandoensenas.com o maurospinarev@gmail.com");
     }
 
     // **Validación del mensaje**
     if (empty($message) || preg_match("/" . implode("|", $palabras_bloqueadas) . "/i", $message)) {
-        show_popup("Error: El mensaje no es válido.\n\nEn caso de algún error comunícate al correo hablandoensenas@gmail.com, info@hablandoensenas.com o maurospinarev@gmail.com");
+        show_popup("Error: el mensaje no es válido.\n\nSi hay algún error, comunícate al correo hablandoensenas@gmail.com, info@hablandoensenas.com o maurospinarev@gmail.com");
     }
 
     // ── CORREO DE CONFIRMACIÓN AL USUARIO ───────────────────────────────────
@@ -180,9 +180,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // ── RESPUESTA FINAL ──────────────────────────────────────────────────────
     if ($mail_user_ok && $mail_admin_ok) {
-        show_popup("Tu mensaje ha sido enviado satisfactoriamente. ¡Muy pronto nos pondremos en contacto!\n\nEn caso de algún error comunícate al correo hablandoensenas@gmail.com, info@hablandoensenas.com o maurospinarev@gmail.com");
+        show_popup("Tu mensaje se ha enviado correctamente. Muy pronto nos pondremos en contacto.\n\nSi hay algún error, comunícate al correo hablandoensenas@gmail.com, info@hablandoensenas.com o maurospinarev@gmail.com");
     } else {
-        show_popup("Hubo un error al enviar el mensaje. Por favor comunícate directamente al correo hablandoensenas@gmail.com, info@hablandoensenas.com o maurospinarev@gmail.com");
+        show_popup("Hubo un error al enviar el mensaje. Por favor, comunícate directamente al correo hablandoensenas@gmail.com, info@hablandoensenas.com o maurospinarev@gmail.com");
     }
 }
 ?>

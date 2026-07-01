@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demostración de Nuevas Secciones - Hablando EnSeñas</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Oswald&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/newworks-modal.css">
+  <!-- Link the custom CSS -->
+  <link rel="stylesheet" href="css/new_sections.css">
+
+  <style>
+    /* Styling for the demo wrapper page (outside the encapsulated sections) */
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #f1f5f9;
+      font-family: 'Merriweather', sans-serif;
+      overflow-x: hidden;
+    }
+
+    .new-demo-nav {
+      background: #345c5c;
+      padding: 20px;
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .new-demo-nav h1 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.5rem;
+      margin: 0;
+      color: #a3c34c;
+    }
+
+    .new-demo-links {
+      display: flex;
+      gap: 20px;
+    }
+
+    .new-demo-links a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.95rem;
+      transition: color 0.3s ease;
+    }
+
+    .new-demo-links a:hover {
+      color: #a3c34c;
+    }
+
+    .new-demo-intro {
+      text-align: center;
+      padding: 50px 20px;
+      background: #fff;
+      border-bottom: 1px solid #e2e8f0;
+      position: relative;
+      z-index: 10;
+    }
+
+    .new-demo-intro h2 {
+      color: #345c5c;
+      margin-bottom: 10px;
+    }
+
+    .new-demo-intro p {
+      color: #64748b;
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.5;
+    }
+
+    .new-demo-footer {
+      background: #0f172a;
+      color: #94a3b8;
+      padding: 30px;
+      text-align: center;
+      border-top: 1px solid #1e293b;
+      position: relative;
+      z-index: 10;
+    }
+  </style>
+</head>
+
+<body>
+
+
+
+  <!-- ==========================================
+       SECCIÓN 3: newworks (Gallery)
+       ========================================== -->
+  <section class="newworks" id="newworks">
+    <!-- Ambient background blobs -->
+    <div class="new-ambient-blob new-blob-primary"></div>
+    <div class="new-ambient-blob new-blob-secondary"></div>
+
+    <div class="newworks-container">
+      <div class="newworks-header">
+        <!-- Accessible space for Sign Language GIF -->
+        <div class="newsection-gif-container">
+          <img src="gifs/trabajos-moseg-transparente.gif" alt="Gif de Trabajos Realizados señado por una persona sorda"
+            class="newsection-gif" onerror="this.style.display='none';">
+        </div>
+        <h2 class="newworks-title">Trabajos y <span>Demostraciones</span></h2>
+        <p class="newworks-subtitle">Explora nuestra galería interactiva de proyectos realizados, capacitaciones y
+          recursos multimedia de apoyo</p>
+        <div class="newworks-line"></div>
+      </div>
+
+      <!-- Filter Buttons -->
+      <div class="newworks-filters">
+        <button class="newworks-filter-btn newactive" data-filter="all">Todos</button>
+        <button class="newworks-filter-btn" data-filter="image">Imágenes</button>
+        <button class="newworks-filter-btn" data-filter="video">Videos</button>
+        <button class="newworks-filter-btn" data-filter="project">Proyectos</button>
+        <button class="newworks-filter-btn" data-filter="upcoming">Próximos Proyectos</button>
+      </div>
+
+      <!-- Gallery Grid -->
+      <div class="newworks-grid">
+        <!-- Item 1: Image -->
+        <div class="newworks-item newreveal" data-category="image">
+          <div class="newworks-card newworks-media-card">
+            <div class="newworks-media-wrapper">
+              <img src="images/Juegos/alfabetojuego.png" alt="Talleres de LSC" class="newworks-img"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+              <div class="newworks-placeholder-svg"
+                style="background: linear-gradient(135deg, #a3c34c 0%, #345c5c 100%);">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  style="width: 48px; height: 48px; margin-bottom: 12px;">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                    d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                </svg>
+                <span>Talleres Interactivos</span>
+              </div>
+              <div class="newworks-overlay">
+                <span class="newworks-category-badge">Imagen</span>
+                <h3 class="newworks-item-title">Talleres de LSC Prácticos</h3>
+                <p class="newworks-item-desc">Clases interactivas utilizando materiales lúdicos y dinámicos para
+                  facilitar el aprendizaje visual.</p>
+                <button class="newworks-action-btn newworks-btn-lightbox" data-src="images/Juegos/alfabetojuego.png"
+                  data-type="image" data-title="Talleres de LSC Prácticos">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 2: Video -->
+        <div class="newworks-item newreveal" data-category="video">
+          <div class="newworks-card newworks-media-card">
+            <div class="newworks-media-wrapper">
+              <video class="newworks-video-preview" muted loop playsinline
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <source src="videos/Bienvenida.mp4" type="video/mp4">
+              </video>
+              <div class="newworks-placeholder-svg"
+                style="background: linear-gradient(135deg, #345c5c 0%, #0f172a 100%);">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  style="width: 44px; height: 44px; margin-bottom: 10px;">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                    d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                </svg>
+                <span>Bienvenida EnSeñas</span>
+              </div>
+              <div class="newworks-overlay">
+                <span class="newworks-category-badge">Video</span>
+                <h3 class="newworks-item-title">Presentación LSC</h3>
+                <p class="newworks-item-desc">Mensaje de bienvenida en Lengua de Señas Colombiana por nuestro equipo
+                  sordo.</p>
+                <button class="newworks-action-btn newworks-btn-lightbox" data-src="videos/Bienvenida.mp4"
+                  data-type="video" data-title="Video Bienvenida LSC">
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M8 5v14l11-7z" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 3: Project -->
+        <div class="newworks-item newreveal" data-category="project">
+          <div class="newworks-card newworks-project-card">
+            <div class="newworks-media-wrapper">
+              <img src="images/aprendeSenas.png" alt="Aprende Jugando" class="newworks-img"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+              <div class="newworks-placeholder-svg"
+                style="background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  style="width: 44px; height: 44px; margin-bottom: 10px;">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                    d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                </svg>
+                <span>Plataforma Educativa</span>
+              </div>
+              <div class="newworks-project-badge">Proyecto</div>
+            </div>
+            <div class="newworks-project-content">
+              <h3 class="newworks-project-title">Aprende jugando</h3>
+              <p class="newworks-project-desc">Herramienta lúdica digital e inclusiva diseñada para que niños y adultos
+                aprendan vocabulario básico de LSC de forma divertida.</p>
+              <a href="juegos/index.html" class="newworks-project-link">
+                <span>Ver Proyecto</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 4: Image -->
+        <div class="newworks-item newreveal" data-category="image">
+          <div class="newworks-card newworks-media-card">
+            <div class="newworks-media-wrapper">
+              <img src="images/Logo/logoo.png" alt="Logo Hablando Enseñas" class="newworks-img"
+                style="object-fit: contain; padding: 25px; background: #fff;"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+              <div class="newworks-placeholder-svg"
+                style="background: linear-gradient(135deg, #f1f5f9 0%, #cbd5e1 100%);">
+                <span>Logo Institucional</span>
+              </div>
+              <div class="newworks-overlay">
+                <span class="newworks-category-badge">Imagen</span>
+                <h3 class="newworks-item-title">Identidad Corporativa</h3>
+                <p class="newworks-item-desc">El logo de Hablando EnSeñas simboliza la unión gestual y la fuerza de la
+                  inclusión.</p>
+                <button class="newworks-action-btn newworks-btn-lightbox" data-src="images/Logo/logoo.png"
+                  data-type="image" data-title="Identidad Corporativa">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 5: Video -->
+        <div class="newworks-item newreveal" data-category="video">
+          <div class="newworks-card newworks-media-card">
+            <div class="newworks-media-wrapper">
+              <div class="newworks-placeholder-svg"
+                style="background: linear-gradient(135deg, #ef4444 0%, #b91c1c 100%);">
+                <svg viewBox="0 0 24 24" fill="currentColor" style="width: 50px; height: 50px; margin-bottom: 8px;">
+                  <path
+                    d="M23.498 6.163a3.003 3.003 0 0 0-2.11-2.11C19.517 3.545 12 3.545 12 3.545s-7.517 0-9.388.508a3.003 3.003 0 0 0 2.11 2.11c1.871.508 9.388.508 9.388.508s7.517 0 9.388-.508a3.003 3.003 0 0 0 2.11-2.11C24 15.967 24 12 24 12s0-3.967-.502-5.837zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                </svg>
+                <span>Video Promocional</span>
+              </div>
+              <div class="newworks-overlay">
+                <span class="newworks-category-badge">Video</span>
+                <h3 class="newworks-item-title">Inclusión en Acción</h3>
+                <p class="newworks-item-desc">Muestra del impacto de los ajustes razonables en entornos corporativos
+                  (Carga desde YouTube).</p>
+                <button class="newworks-action-btn newworks-btn-lightbox"
+                  data-src="https://www.youtube.com/embed/FiAoMV9k8-8" data-type="iframe"
+                  data-title="Video de Inclusión Corporativa">
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M8 5v14l11-7z" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 6: Upcoming Project 1 -->
+        <div class="newworks-item newreveal" data-category="upcoming">
+          <div class="newworks-card newworks-project-card">
+            <div class="newworks-media-wrapper">
+              <div class="newworks-placeholder-svg"
+                style="background: linear-gradient(135deg, #ff7b54 0%, #345c5c 100%);">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  style="width: 46px; height: 46px; margin-bottom: 10px;">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                    d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                </svg>
+                <span>Traductor IA en Tiempo Real</span>
+              </div>
+              <div class="newworks-project-badge newupcoming-badge">Próximamente</div>
+            </div>
+            <div class="newworks-project-content">
+              <h3 class="newworks-project-title">Traductor LSC con IA</h3>
+              <p class="newworks-project-desc">Software inteligente web basado en visión artificial para la traducción
+                simultánea de señas a texto escrito y voz en tiempo real.</p>
+              <span class="newworks-project-link newupcoming-link" onclick="alert('Proyecto en desarrollo');">
+                <span>En Desarrollo</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 7: Upcoming Project 2 -->
+        <div class="newworks-item newreveal" data-category="upcoming">
+          <div class="newworks-card newworks-project-card">
+            <div class="newworks-media-wrapper">
+              <div class="newworks-placeholder-svg"
+                style="background: linear-gradient(135deg, #ff7b54 0%, #1e293b 100%);">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  style="width: 46px; height: 46px; margin-bottom: 10px;">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                    d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                </svg>
+                <span>Biblioteca Virtual Accesible</span>
+              </div>
+              <div class="newworks-project-badge newupcoming-badge">Próximamente</div>
+            </div>
+            <div class="newworks-project-content">
+              <h3 class="newworks-project-title">Biblioteca LSC Digital</h3>
+              <p class="newworks-project-desc">Creación del mayor repositorio multimedia nacional de cuentos literarios
+                e informativos completamente traducidos y adaptados a LSC.</p>
+              <span class="newworks-project-link newupcoming-link" onclick="alert('Proyecto en desarrollo');">
+                <span>En Desarrollo</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Link the custom JavaScript -->
+  <script src="js/newworks-modal.js"></script>
+  <script src="js/new_sections.js"></script>
+</body>
+
+</html>

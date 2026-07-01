@@ -81,44 +81,52 @@
 //  }
 //});
 
-document.querySelectorAll(".open-modal").forEach(button => {
-  button.addEventListener("click", () => {
-      const modalId = button.getAttribute("data-modal");
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelectorAll('.open-modal').forEach(function (button) {
+    button.addEventListener('click', function () {
+      const modalId = button.getAttribute('data-modal');
       const modal = document.getElementById(modalId);
+      if (!modal) return;
 
-      modal.style.display = "flex"; // Mostrar el modal
-      modal.classList.remove("fade-out");
-
-      requestAnimationFrame(() => {
-          modal.classList.add("fade-in");
+      modal.style.display = 'flex';
+      modal.classList.remove('fade-out');
+      modal.querySelectorAll('iframe[data-src], img[data-src], video[data-src]').forEach(function (el) {
+        var src = el.getAttribute('data-src');
+        if (!src) return;
+        if (el.tagName.toLowerCase() === 'iframe' || el.tagName.toLowerCase() === 'img' || el.tagName.toLowerCase() === 'video') {
+          el.setAttribute('src', src);
+          el.removeAttribute('data-src');
+        }
       });
+      requestAnimationFrame(function () {
+        modal.classList.add('fade-in');
+      });
+    });
   });
-});
 
-document.querySelectorAll(".modal .close").forEach(close => {
-  close.addEventListener("click", () => {
-      const modal = close.closest(".modal");
+  document.querySelectorAll('.modal .close').forEach(function (close) {
+    close.addEventListener('click', function () {
+      const modal = close.closest('.modal');
+      if (!modal) return;
 
-      modal.classList.remove("fade-in");
-      modal.classList.add("fade-out");
-
-      setTimeout(() => {
-          modal.style.display = "none";
-          modal.classList.remove("fade-out");
-      }, 500);
+      modal.classList.remove('fade-in');
+      modal.classList.add('fade-out');
+      window.setTimeout(function () {
+        modal.style.display = 'none';
+        modal.classList.remove('fade-out');
+      }, 250);
+    });
   });
-});
 
-window.addEventListener("click", (e) => {
-  if (e.target.classList.contains("modal")) {
+  window.addEventListener('click', function (e) {
+    if (e.target.classList.contains('modal')) {
       const modal = e.target;
-
-      modal.classList.remove("fade-in");
-      modal.classList.add("fade-out");
-
-      setTimeout(() => {
-          modal.style.display = "none";
-          modal.classList.remove("fade-out");
-      }, 500);
-  }
+      modal.classList.remove('fade-in');
+      modal.classList.add('fade-out');
+      window.setTimeout(function () {
+        modal.style.display = 'none';
+        modal.classList.remove('fade-out');
+      }, 250);
+    }
+  });
 });

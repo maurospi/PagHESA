@@ -82,17 +82,17 @@
             const service1 = document.getElementById("servicio");
             if (!service1) return;
 
-            // Si está oculto, lo mostramos; si está visible, lo ocultamos
-            if (service1.style.display === "none" || getComputedStyle(service1).display === "none") {
+            const isHidden = service1.style.display === "none" || getComputedStyle(service1).display === "none";
+            if (isHidden) {
                 service1.style.display = "block";
-                setTimeout(() => {
+                window.setTimeout(function () {
                     service1.style.opacity = "1";
                 }, 10);
             } else {
                 service1.style.opacity = "0";
-                setTimeout(() => {
+                window.setTimeout(function () {
                     service1.style.display = "none";
-                }, 500);
+                }, 250);
             }
         }
 
@@ -101,16 +101,17 @@
             const service2 = document.getElementById("servicio-escrito");
             if (!service2) return;
 
-            if (service2.style.display === "none" || getComputedStyle(service2).display === "none") {
+            const isHidden = service2.style.display === "none" || getComputedStyle(service2).display === "none";
+            if (isHidden) {
                 service2.style.display = "block";
-                setTimeout(() => {
+                window.setTimeout(function () {
                     service2.style.opacity = "1";
                 }, 10);
             } else {
                 service2.style.opacity = "0";
-                setTimeout(() => {
+                window.setTimeout(function () {
                     service2.style.display = "none";
-                }, 500);
+                }, 250);
             }
         }
 
@@ -139,9 +140,9 @@
             if (!service1) return;
 
             service1.style.opacity = "0";
-            setTimeout(() => {
+            window.setTimeout(function () {
                 service1.style.display = "none";
-            }, 500);
+            }, 250);
         }
 
         // Ocultar solo el servicio 2 (escrito)
@@ -150,9 +151,9 @@
             if (!service2) return;
 
             service2.style.opacity = "0";
-            setTimeout(() => {
+            window.setTimeout(function () {
                 service2.style.display = "none";
-            }, 500);
+            }, 250);
         }
 
         // Ocultar ambos servicios
@@ -162,16 +163,16 @@
 
             if (service1) {
                 service1.style.opacity = "0";
-                setTimeout(() => {
+                window.setTimeout(function () {
                     service1.style.display = "none";
-                }, 500);
+                }, 250);
             }
 
             if (service2) {
                 service2.style.opacity = "0";
-                setTimeout(() => {
+                window.setTimeout(function () {
                     service2.style.display = "none";
-                }, 500);
+                }, 250);
             }
 
             const btnOcultar = document.getElementById("ocultarambos");
