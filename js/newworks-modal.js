@@ -1,7 +1,8 @@
+/* ==========================================
+   MODAL / LIGHTBOX - Hablando EnSeñas
+   ========================================== */
 (function () {
   'use strict';
-
-  var scriptsLoaded = { instagram: false, facebook: false, twitter: false, tiktok: false };
 
   function loadExternalScript(src, checkFn, onLoad) {
     if (checkFn && checkFn()) { onLoad && onLoad(); return; }
@@ -17,11 +18,16 @@
     document.body.appendChild(s);
   }
 
+  // AHORA DETECTA MUCHAS MÁS PLATAFORMAS AUTOMÁTICAMENTE
   function detectPlatform(url) {
+    if (!url) return null;
     if (/instagram\.com/i.test(url)) return 'instagram';
     if (/facebook\.com|fb\.watch/i.test(url)) return 'facebook';
     if (/tiktok\.com/i.test(url)) return 'tiktok';
     if (/twitter\.com|x\.com/i.test(url)) return 'twitter';
+    if (/youtube\.com|youtu\.be/i.test(url)) return 'youtube';
+    if (/vimeo\.com/i.test(url)) return 'vimeo';
+    if (/spotify\.com/i.test(url)) return 'spotify';
     return null;
   }
 
@@ -56,7 +62,6 @@
               </svg>
             </a>
           </div>
-
         </div>
       </div>
     `;
@@ -79,70 +84,111 @@
         case 'facebook': return 'Facebook';
         case 'tiktok': return 'TikTok';
         case 'twitter': return 'X / Twitter';
+        case 'youtube': return 'YouTube';
+        case 'vimeo': return 'Vimeo';
+        case 'spotify': return 'Spotify';
         default: return 'Publicación';
       }
     }
     return (type === 'video' || type === 'iframe') ? 'Video' : 'Imagen';
   }
 
-  function renderSocialEmbed(mediaEl, src, platformOverride) {
-    const platform = platformOverride || detectPlatform(src);
-
-    if (platform === 'instagram') {
-      mediaEl.innerHTML = '<blockquote class="instagram-media" data-instgrm-permalink="' + src + '" data-instgrm-version="14" style="margin:0 auto; width:100%;"></blockquote>';
-      loadExternalScript(
-        'https://www.instagram.com/embed.js',
-        function () { return !!(window.instgrm && window.instgrm.Embeds); },
-        function () { window.instgrm && window.instgrm.Embeds.process(); }
-      );
+  function renderSocialEmbed(mediaEl, src, platformOverride, rawEmbedCode) {
+    // 1. Si el usuario puso un código de inserción personalizado (LinkedIn, Pinterest, etc), lo usamos directo.
+    if (rawEmbedCode && rawEmbedCode.trim() !== '') {
+      mediaEl.innerHTML = rawEmbedCode;
       return;
     }
-    // Fallback genérico para iframe (simplificado aquí por brevedad)
+
+    const platform = platformOverride || detectPlatform(src);
+
+    // 2. Lógica para cada plataforma conocida
+    if (platform === 'instagram') {
+      mediaEl.innerHTML = '<blockquote class="instagram-media" data-instgrm-permalink="' + src + '?utm_source=ig_embed" data-instgrm-version="14" style="margin:0 auto; width:100%;"></blockquote>';
+      loadExternalScript('https://www.instagram.com/embed.js', 
+        () => !!(window.instgrm && window.instgrm.Embeds), 
+        () => window.instgrm && window.instgrm.Embeds.process());
+      return;
+    }
+
+    if (platform === 'youtube') {
+      const videoId = src.match(/(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=))([^&?]+)/);
+      const id = videoId ? videoId[1] : '';
+      mediaEl.innerHTML = `<iframe width="100%" height="450" src="https://www.youtube.com/embed/${id}?autoplay=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+      return;
+    }
+
+    if (platform === 'spotify') {
+      const embedUrl = src.replace('open.spotify.com', 'open.spotify.com/embed');
+      mediaEl.innerHTML = `<iframe src="${embedUrl}" width="100%" height="352" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>`;
+      return;
+    }
+
+    if (platform === 'tiktok') {
+      mediaEl.innerHTML = `<blockquote class="tiktok-embed" cite="${src}" style="max-width:605px; min-width:325px; margin:0 auto;"><section></section></blockquote>`;
+      loadExternalScript('https://www.tiktok.com/embed.js', () => !!window.tiktokEmbedLoaded, () => { window.tiktokEmbedLoaded = true; });
+      return;
+    }
+
+    // 3. Fallback genérico para cualquier otro link (Iframe genérico)
     const iframe = document.createElement('iframe');
     iframe.src = src;
     iframe.style.width = '100%';
     iframe.style.minHeight = '480px';
     iframe.style.border = 'none';
+    iframe.allowFullscreen = true;
     mediaEl.appendChild(iframe);
   }
 
   function openModal(overlay, data) {
     const mediaEl = overlay.querySelector('#hesLbxMedia');
+    const titleEl = overlay.querySelector('#hesLbxTitle');
+    const textEl = overlay.querySelector('#hesLbxText');
+    const badgeEl = overlay.querySelector('#hesLbxBadge');
     const linkEl = overlay.querySelector('#hesLbxLink');
+    const linkTextEl = overlay.querySelector('#hesLbxLinkText');
     const link2El = overlay.querySelector('#hesLbxLink2');
+    const linkText2El = overlay.querySelector('#hesLbxLinkText2');
 
     mediaEl.innerHTML = '';
     mediaEl.classList.remove('hesLbx-media-social');
 
-    overlay.querySelector('#hesLbxTitle').textContent = data.title || '';
-    overlay.querySelector('#hesLbxText').textContent = data.desc || '';
-    overlay.querySelector('#hesLbxBadge').textContent = getBadgeLabel(data.type, data.platform || detectPlatform(data.src));
+    // Manejo de contenido visual
+    if (data.type === 'video') {
+      mediaEl.innerHTML = `<video src="${data.src}" controls autoplay playsinline style="width:100%;"></video>`;
+    } else if (data.type === 'iframe') {
+      mediaEl.innerHTML = `<iframe src="${data.src}${data.src.includes('?') ? '&' : '?'}autoplay=1" width="100%" height="480" allowfullscreen style="border:none;"></iframe>`;
+    } else if (data.type === 'social') {
+      mediaEl.classList.add('hesLbx-media-social');
+      renderSocialEmbed(mediaEl, data.src, data.platform, data.embedCode); // Pasamos el custom embed!
+    } else {
+      mediaEl.innerHTML = `<img src="${data.src}" alt="${data.title || ''}">`;
+    }
+
+    titleEl.textContent = data.title || '';
+    textEl.textContent = data.desc || '';
+    badgeEl.textContent = getBadgeLabel(data.type, data.platform || detectPlatform(data.src));
 
     // Lógica Botón 1
-    if (data.linkUrl) {
+    if (data.linkUrl && data.linkUrl.trim() !== '') {
       linkEl.href = data.linkUrl;
-      overlay.querySelector('#hesLbxLinkText').textContent = data.linkText || 'Ver más';
+      linkTextEl.textContent = data.linkText || 'Ver más';
       linkEl.hidden = false;
+      linkEl.style.display = 'inline-flex';
     } else {
       linkEl.hidden = true;
+      linkEl.style.display = 'none';
     }
 
-    // Lógica Botón 2 (Nuevo)
-    if (data.link2Url) {
+    // Lógica Botón 2
+    if (data.link2Url && data.link2Url.trim() !== '') {
       link2El.href = data.link2Url;
-      overlay.querySelector('#hesLbxLinkText2').textContent = data.link2Text || 'Registro';
+      linkText2El.textContent = data.link2Text || 'Registro';
       link2El.hidden = false;
+      link2El.style.display = 'inline-flex';
     } else {
       link2El.hidden = true;
-    }
-
-    if (data.type === 'social') {
-      mediaEl.classList.add('hesLbx-media-social');
-      renderSocialEmbed(mediaEl, data.src, data.platform);
-    } else if (data.type === 'video') {
-      mediaEl.innerHTML = `<video src="${data.src}" controls autoplay playsinline style="width:100%;"></video>`;
-    } else {
-      mediaEl.innerHTML = `<img src="${data.src}" alt="${data.title}" style="width:100%; height:auto;">`;
+      link2El.style.display = 'none';
     }
 
     overlay.classList.add('hesLbx-active');
@@ -152,39 +198,46 @@
   function closeModal(overlay) {
     overlay.classList.remove('hesLbx-active');
     document.body.classList.remove('hesLbx-open');
-    setTimeout(() => { overlay.querySelector('#hesLbxMedia').innerHTML = ''; }, 300);
+    const mediaEl = overlay.querySelector('#hesLbxMedia');
+    setTimeout(() => { mediaEl.innerHTML = ''; }, 300);
   }
 
   document.addEventListener('DOMContentLoaded', function () {
     const overlay = buildModal();
-    let active = false;
+    const closeBtn = overlay.querySelector('#hesLbxClose');
 
     document.addEventListener('click', function (e) {
       const trigger = e.target.closest('.newworks-btn-lightbox');
       if (!trigger) return;
       e.preventDefault();
 
-      if (!trigger.dataset.src) return;
+      const src = trigger.dataset.src;
+      if (!src && !trigger.dataset.embed) return; // Ahora permite abrir si hay embed aunque no haya src
 
-      if (!active) {
-        active = true;
-      }
-      
-      openModal(overlay, {
-        src: trigger.dataset.src,
+      const data = {
+        src: src || '',
         type: trigger.dataset.type || 'image',
-        title: trigger.dataset.title,
+        title: trigger.dataset.title || '',
         desc: getDescription(trigger),
-        linkUrl: trigger.dataset.linkUrl,
-        linkText: trigger.dataset.linkText,
-        link2Url: trigger.dataset.link2Url,
-        link2Text: trigger.dataset.link2Text,
-        platform: trigger.dataset.platform
-      });
+        linkUrl: trigger.dataset.linkUrl || '',
+        linkText: trigger.dataset.linkText || '',
+        link2Url: trigger.dataset.link2Url || '',
+        link2Text: trigger.dataset.link2Text || '',
+        platform: trigger.dataset.platform || '',
+        embedCode: trigger.dataset.embed || '' // Capturamos el nuevo atributo
+      };
+
+      openModal(overlay, data);
     });
 
-    overlay.querySelector('#hesLbxClose').addEventListener('click', () => closeModal(overlay));
-    overlay.addEventListener('click', function (e) { if (e.target === overlay) closeModal(overlay); });
-    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeModal(overlay); });
+    closeBtn.addEventListener('click', () => closeModal(overlay));
+    overlay.addEventListener('click', function (e) {
+      if (e.target === overlay) closeModal(overlay);
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && overlay.classList.contains('hesLbx-active')) {
+        closeModal(overlay);
+      }
+    });
   });
 })();
