@@ -2222,17 +2222,26 @@ a.btn-blg:hover {
 #client {
 	text-align: center;
 	position: relative;
-	padding: 70px 0px 10px 0px;
+	padding: 30px 0px 30px 0px;
+	border-bottom: #345c5c9d 1px solid;
+	border-top: #a3c34ca4 1px solid;
 }
 
 .client-logo a {
 	opacity: 0.4;
 	display: table;
 	margin: 0 auto;
+	position: center;
+	padding-left: 25px;
+	padding-right: 25px;
+	padding-bottom: center;
+	padding-top: center;
+	height: 80px;
+	width: 100%;
 }
 
 .client-logo a:hover {
-	opacity: 1;
+	opacity: 2;
 	transition: all 0.5s;
 	-moz-transition: all 0.8s;
 	-o-transition: all 0.8s;
